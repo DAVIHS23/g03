@@ -15,13 +15,13 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-  background-image: url('https://cdn.pixabay.com/photo/2018/01/29/13/03/internet-3116062_1280.jpg');
+  background-image: url('../img/Hu-Chen.jpg');
   min-height: 100%;
 }
 
 /* Second image (Portfolio) */
 .bgimg-2 {
-  background-image: url("https://cdn.pixabay.com/photo/2018/08/18/13/26/interface-3614766_1280.png");
+  background-image: url('../img/Jukan-Tateisi.jpg');
   min-height: 400px;
 }
 
