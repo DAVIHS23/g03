@@ -37,7 +37,8 @@
     <div class="bgimg-1 w3-display-containeer w3-opacity-min" id="home">
         <div class="w3-display-middle" style="white-space:nowrap;">
                 <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> 
-                    <span class="w3-hide-small">Let's climb the world</span> </span>
+                    <span class="w3-hide-small">Let's climb the world</span> 
+                </span>
         </div>
     </div>
 
@@ -58,15 +59,32 @@
             - In welchem Schwierigkeitsgrad klettern Personen mit gleichem Body-Mass-Index wie ich/du? <br />
             - In welchem Land hat es für mein Können am meisten Kletterrouten? <br />
             - Sind in den westlichen Ländern mehr Kletterrouten öffentlich bekannt?  <br />
-            Wir wünschen viel Spass beim Erkunden.
+            <br/>
         </p>
-
+        <h5 class="w4-center">Konzept / Prototyp</h5>
+        <p>Bevor wir mit der Entwicklung der Webseite gestartet sind, haben wir einen Prototyp in Tableau erstellt.
+                Dadurch machten wir uns entsprechend Gedanken, welche Daten wir wie visualisieren möchten.<br/>
+                <br/>
+                Weltkarte (Chronopleth):<br/>
+                Barchart "Top 10":<br/>
+                Drei Liniendiagramme:<br/>
+                <br/>
+        </p>
+        <h5 class="w4-center">Erkenntnisse</h5>
+        <p>Bei der Explorativen Analyse des Datensatzes haben wir folgende Erkenntnisse gewonnen:<br/>
+        Frauen/Männer:<br/>
+        BMI: <br/>
+        Routen: <br/>
+            <br/>
+                Wir wünschen viel Spass beim eigenen Erkunden.<br/>
+         
+        </p>
     </div>
 
 <!-- SECOND BG IMAGE WITH Data TEXT -->
     <div class="bgimg-2 w3-display-container w3-opacity-min">
         <div class="w3-display-middle">
-            <span class="w3-xxlarge w3-text-white w3-wide">DATA</span>
+            <span class="w3-xxlarge w3-text-white w3-wide">DATEN</span>
         </div>
     </div>
 
@@ -74,71 +92,86 @@
 <!-- SECTION DATA   -->
     <div class="w3-content w3-container w3-padding-64" id="data">
         <h3 class="w3-center">Daten</h3>
-        <p>&DAVI& Untertitel<br/>
-            &DAVI& Text woher die Daten kommen nach Aufgabenstellung
-        </p>
+        <h5 class="w4-center">Datenquellen und Attribute</h5>
+        <p>Die zwei Datensätze sind auf Kaggle verfügbar:<br/>
+        <li><a href="https://www.kaggle.com/datasets/jordizar/climb-dataset/data" target="_blank">Open Source Datensatz "Climb Dataset" von Kaggle</a></li>
+        <ul>climber-df: CSV-File mit 10'927 Tuples und 15 Attributen</ul>
+        <ul>routes_rated: CSV-File mit 55'858 Tuples und 9 Attributen</ul>
+        <ul>grades_conversion_table: CSV-File mit 85 Tuples und 2 Attributen</ul>
+        <li><a href="https://www.kaggle.com/datasets/juanumusic/countries-iso-codes/" target="_blank">Open Source Datensatz "Countries ISO Codes" von Kaggle</a></li>
+        <ul>iso_country_coudes: CSV-File mit 246 Tuples und 5 Attributen</ul>
+    </p>
+    <br/>
+        <h5 class="w4-center">Daten Bereinigung</h5>
+        <p>Der Kaggle-Datensatz ist ziemlich groß. Um unsere Visualisierungen in D3.js effizient darstellen zu können, 
+            bereiteten wir die Daten entsprechend auf. Die meisten Vorbereitungen haben wir entweder in Excel PowerQuery 
+            oder auf einem Jupyter Notebook mit Python durchgeführt, um die Daten zu aggregieren und zu filtern.<br/>
     </div>
 
 <!-- SECTION VISUALIZATION -->
 <div class="w3-content w3-container w3-padding-64" id="viz">
     <h3 class="w3-center">Visualisierung</h3>
-    <p>&DAVI& Untertitel<br/>
-        &DAVI& Hierhin kommt der komplette D3 Code (kann natürlich auch mit externen script gemacht werden, aber hier hat er auch Platz)
-        Beispiel: <br/>
-        <svg id="my_dataviz" width="400" height="300"></svg>
-        <script>
-
-        // The svg
-        var svg = d3.select("svg"),
-            width = +svg.attr("width"),
-            height = +svg.attr("height");
-                
-        // Map and projection
-        var projection = d3.geoNaturalEarth()
-            .scale(width / 1.3 / Math.PI)
-            .translate([width / 2, height / 2])
-                
-        // Load external data and boot
-        d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson", function(data)
-            {    
-            // Draw the map
-            svg.append("g")
-                .selectAll("path")
-                .data(data.features)
-                .enter().append("path")
-                .attr("fill", "#69b3a2")
-                .attr("d", d3.geoPath()
-                        .projection(projection)
-                    )
-                .style("stroke", "#fff")
-            }
-        )
-        </script>
+    <h5 class="w4-center">Dashboard der Climbing-Daten</h5>
+    <p>
+        <br/>
+        <br/>
     </p>
 </div>
 
 <!-- SECTION DESIGN -->
     <div class="w3-content w3-container w3-padding-64" id="design">
         <h3 class="w3-center">Desing</h3>
-        <p>&DAVI& Untertitel<br/>
-            &DAVI& Hier die Info wieso weshalb warum man was hingebogen hat im D3
+        <h5 class="w4-center">Visuelle Design-Entscheidungen</h5>
+        <p><br/>
+        </p>
+        <h5 class="w4-center">Prinzipien von Analytischem Design (nach Tufte)</h5>
+            <h6 class="w4-center">Prinzip 1: Vergleichbarkeit</h6>
+        <p><br/>
+            <h6 class="w4-center">Prinzip 2: Kausalität</h6>
+        <p><br/>
+            <h6 class="w4-center">Prinzip 3: Mehr-Variablen Analyse</h6>
+        <p><br/>
+            <h6 class="w4-center">Prinzip 4: Integration der Evidence</h6>
+        <p><br/>
+            <h6 class="w4-center">Prinzip 5: Dokumentation</h6>
+        <p><br/>
+            <h6 class="w4-center">Prinzip 6: Inhalt ist das Wichtigste</h6>
+        <p><br/>
+        <h5 class="w4-center">Daten-Tinten-Verhältnis</h5>
+        <p><br/>
+        <h5 class="w4-center">Menschliche Wahrnehmung</h5>
+        <p><br/>
+        <h5 class="w4-center">Schritte in der Daten-Visualisierung</h5>
+            <h6 class="w4-center">Überblick zuerst</h6>
+        <p><br/>
+            <h6 class="w4-center">Zoomen und Filtern</h6>
+        <p><br/>
+            <h6 class="w4-center">Details nach Bedarf</h6>
+        <p><br/>
         </p>
     </div>
 
-<!-- SECTION DESIGN -->
+<!-- SECTION REFERENCES -->
     <div class="w3-content w3-container w3-padding-64" id="ref">
-        <h3 class="w3-center">References</h3>
-        <p>&DAVI& Untertitel<br/>
-            &DAVI& Wo hast du was geklaut?, die Website hier ist von W3.org, einfach in einer viel weniger fancy-version
+        <h3 class="w3-center">Referenzen</h3>
+        <p>Bei der Entwicklung dieser Website wurde auf verschiedene Quellen zurückgegriffen. 
+            Alle relevanten Quellen sind nachfolgend aufgelistet:<br/>
         </p>
+        <ul>
+            <li><a href="https://d3js.org/" target="_blank">D3 Documentation</a></li>
+            <li><a href="https://www.oreilly.com/library/view/interactive-data-visualization/9781491921296/" target="_blank">Interactive Data Visualization for the Web by Scott Murray</a></li>
+             <li><a href="https://www.d3-graph-gallery.com/graph/choropleth_hover_effect.html" target="_blank">Choropleth map with hover effect</a></li>
+             <li><a href="http://bl.ocks.org/palewire/d2906de347a160f38bc0b7ca57721328" target="_blank">World Choropleth</a></li>
+             <li><a href="http://bl.ocks.org/dougdowson/9832019" target="_blank">Choropleth</a></li>
+        </ul>  
     </div>  
     
-<!-- SECTION DESIGN -->
+<!-- SECTION TEAM -->
     <div class="w3-content w3-container w3-padding-64" id="Team">
         <h3 class="w3-center">Team</h3>
-        <p>&DAVI& Untertitel<br/>
-            &DAVI& Kontaktdaten des Teams
-        </p>
+        <p>Diese Seite wurde im Rahmen des Kurses "Datenvisualisierung (DAVI)" an der Hochschule Luzern (HSLU) von den folgenden zwei Studenten erstellt:</p>
+        <p><b>Corinne Walser-Schwarzentruber </b><br>Bsc in Wirtschaftsinformatik (I.BSCWI.1901)<br>Hochschule Luzern<br><a href="mailto:corinne.walser-schwarzentruber@stud.hslu.ch">E-Mail</a></p>    
+        <p><b>Rajeepan Ratnasingam</b><br>Bsc in Wirtschaftsinformatik (I.BSCWI_F21.2001)<br>Hochschule Luzern<br><a href="mailto:rajeepan.ratnasingam@stud.hslu.ch">E-Mail</a></p>
     </div>  
 
 </body>
