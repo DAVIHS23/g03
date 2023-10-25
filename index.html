@@ -4,15 +4,17 @@
     <title>Climb the world!</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!--Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Load d3.js -->
-    <script src="https://d3js.org/d3.v4.js"></script>
-    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
-    
+    <!-- Load D3 -->
+    <!-- <script src="https://d3js.org/d3.v4.js"></script> -->
+    <script src="https://d3js.org/d3.v7.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v3.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v4.min.js"></script>
 </head>
 <body>
     
@@ -93,7 +95,9 @@
     <div class="w3-content w3-container w3-padding-64" id="data">
         <h3 class="w3-center">Daten</h3>
         <h5 class="w4-center">Datenquellen und Attribute</h5>
-        <p>Die zwei Datensätze sind auf Kaggle verfügbar:<br/>
+        <p>Im "Climb Dataset" werden die Länder der Kletterer und der Routen mit dem 3-stelligen ISO-Code angegeben. 
+            Damit das Land in der den Visualisierungen für den User ausgeschrieben erscheinen kann, wurde das zweite Dataset "Countries ISO Codes" hinzugezogen.
+            Die zwei Datensätze sind auf Kaggle verfügbar:<br/>
         <li><a href="https://www.kaggle.com/datasets/jordizar/climb-dataset/data" target="_blank">Open Source Datensatz "Climb Dataset" von Kaggle</a></li>
         <ul>climber-df: CSV-File mit 10'927 Tuples und 15 Attributen</ul>
         <ul>routes_rated: CSV-File mit 55'858 Tuples und 9 Attributen</ul>
@@ -112,10 +116,26 @@
 <div class="w3-content w3-container w3-padding-64" id="viz">
     <h3 class="w3-center">Visualisierung</h3>
     <h5 class="w4-center">Dashboard der Climbing-Daten</h5>
-    <p>
+    <p>(Optimiert auf Full-Screen Windows)
         <br/>
         <br/>
     </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 <!-- SECTION DESIGN -->
