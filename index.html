@@ -52,7 +52,7 @@
             Kletterer müssen nicht nur starke Arme, sondern auch eine stabile Rumpfmuskulatur und Beinkraft entwickeln. 
             Ausdauer spielt eine entscheidende Rolle, da die Kletterrouten oft lang sind und Durchhaltevermögen erfordern. 
             Auch Beweglichkeit ist wichtig, um sich in ungewohnten Positionen zurechtzufinden. 
-            Neben der körperlichen Vorbereitung erfordert Klettern auch mentale Stärke, um Ängste zu überwinden und Herausforderungen zu überwinden. 
+            Neben der körperlichen Vorbereitung erfordert Klettern auch mentale Stärke, um Ängste zu überwinden. 
             Zusammenfassend lässt sich sagen, dass Klettern eine Sportart ist, die körperliche Fitness, Konzentration und Geschicklichkeit vereint und es ermöglicht, die eigenen Grenzen auszutesten und die Natur in vollen Zügen zu genießen.
         </p>
         <h5 class="w4-center">Problemstellung / Unser Ziel </h5>
@@ -64,14 +64,22 @@
             <br/>
         </p>
         <h5 class="w4-center">Konzept / Prototyp</h5>
-        <p>Bevor wir mit der Entwicklung der Webseite gestartet sind, haben wir einen Prototyp in Tableau erstellt.
-                Dadurch machten wir uns entsprechend Gedanken, welche Daten wir wie visualisieren möchten.<br/>
-                <br/>
+        <p>Bevor wir mit der Entwicklung der Webseite gestartet sind, haben wir uns Gedanken gemacht, welche Daten
+            wir visualisieren möchten, um die Problemstellungen visuell beantworten zu können. Anschliessen haben wir
+            einige Skizzen von Hand gezeichnet und uns in der Gruppe ausgetauscht. Auch mit Tableau haben wir einige 
+            Visualisierungen angesehen. Sehr hilfreich war auch die D3-Gallerie um sinnvollen Darstellungen zu finden. Hier ist
+            eine gute Übersicht vorhanden, was es für Möglichkeiten gibt.<br/>
+            Für das Nachvollziehn unserer Überlegungen verweisen wir auf den Abschnitt "Design-Entscheidungen"<br/>
                 Weltkarte (Chronopleth):<br/>
                 Barchart "Top 10":<br/>
                 Drei Liniendiagramme:<br/>
                 <br/>
         </p>
+        <h5 class="w4-center">Skizze</h5>
+        <p>Die nachfolgende Skizze zeigt unser im Power-BI erarbeitetes Dashboard mit den Kletter-Daten.</p><br/>
+        <img src="../img/Skizze_Dashboard_PowerBI.png" alt="Skizze Dashboard">
+        <br/>
+        <br/>
         <h5 class="w4-center">Erkenntnisse</h5>
         <p>Bei der Explorativen Analyse des Datensatzes haben wir folgende Erkenntnisse gewonnen:<br/>
         Frauen/Männer:<br/>
@@ -95,15 +103,23 @@
     <div class="w3-content w3-container w3-padding-64" id="data">
         <h3 class="w3-center">Daten</h3>
         <h5 class="w4-center">Datenquellen und Attribute</h5>
-        <p>Im "Climb Dataset" werden die Länder der Kletterer und der Routen mit dem 3-stelligen ISO-Code angegeben. 
-            Damit das Land in der den Visualisierungen für den User ausgeschrieben erscheinen kann, wurde das zweite Dataset "Countries ISO Codes" hinzugezogen.
-            Die zwei Datensätze sind auf Kaggle verfügbar:<br/>
+        <p>Das "Climb Dataset" enthält drei Datensets, welche als CSV-Files zum Download zur Verfügung stehen. Hier enthalten sind Daten zu den
+            Kletterern, zu Routen und eine Schwierigkeitsgrad-Skala. In diesem Dataset werden die Länder mit dem 3-stelligen ISO-Code angegeben. 
+            Damit wir den Namen des Landes in den Visualisierungen für den User auschreiben können, haben wir das zweite Dataset "Countries ISO Codes"
+            ebenfalls von Kaggle verwendet.
+            Die Quellenangaben zu Kaggel für die zwei Datensätze sind:<br/>
         <li><a href="https://www.kaggle.com/datasets/jordizar/climb-dataset/data" target="_blank">Open Source Datensatz "Climb Dataset" von Kaggle</a></li>
         <ul>climber-df: CSV-File mit 10'927 Tuples und 15 Attributen</ul>
         <ul>routes_rated: CSV-File mit 55'858 Tuples und 9 Attributen</ul>
         <ul>grades_conversion_table: CSV-File mit 85 Tuples und 2 Attributen</ul>
         <li><a href="https://www.kaggle.com/datasets/juanumusic/countries-iso-codes/" target="_blank">Open Source Datensatz "Countries ISO Codes" von Kaggle</a></li>
         <ul>iso_country_coudes: CSV-File mit 246 Tuples und 5 Attributen</ul>
+        <br/>
+        Es gibt fast keine Datensets zum Thema Klettern. Dies hat uns dazu bewogen, das Dataset von Kaggel (siehe Quelle oben) zu verwenden, obwohl die
+        die verlinkte, ursprünglichen Quelle (von Autor David Cohen) nicht mehr vorhanden ist. Im Link ist der Name "8anu" enthalten und unsere
+        Annahme ist, dass er die Daten von der Internetseite <a href="https://www.8a.nu" target="_blank">www.8a.nu</a> bezogen hat.<br/>
+        Stichproben in Bezug auf die Routen (z.Bsp. Region "Frankenjura" in Deutschland mit dem Gebiet "Weissenstein") zeigen, dass die Daten im 
+        verwendeten Kaggle-Dataset korrekt sein sollten.
     </p>
     <br/>
         <h5 class="w4-center">Daten Bereinigung</h5>
@@ -123,26 +139,29 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
 
 <!-- SECTION DESIGN -->
     <div class="w3-content w3-container w3-padding-64" id="design">
-        <h3 class="w3-center">Desing</h3>
+        <h3 class="w3-center">Design</h3>
         <h5 class="w4-center">Visuelle Design-Entscheidungen</h5>
-        <p><br/>
+        <br/>
+        <h6 class="w4-center">Weltkarte</h6>
+        <p>Eine Weltkarte bietet eine übersichtliche Möglichkeit, die geografische Verteilung der Kletter-Routen-Gebiete zu zeigen. 
+            Durch die farbliche Darstellung der Länder können wir auf einen Blick erkennen, in welchen Regionen 
+            Kletterrouten im Dataset verfügbar sind. Dies erleichtert die Auswahl eines Kontinets bzw. Landes für Kletter-Ferien.<br/>
+        </p>
+        <br/>
+        <h6 class="w4-center">Heatmap</h6>
+        <p>Die Verwendung einer Heatmap ermöglicht es uns, die Dichte der Kletterrouten auf Ländern oder Crags visuell herauszuarbeiten. 
+            Diese Darstellung hilft, Gebiete mit einer höheren Konzentration von Routen leichter zu erkennen. Es ermöglicht auch die Identifizierung
+            von Gebieten mit einem breiten Angebot an Kletterrouten im Vergleich zu weniger frequentierten Orten.<br/>
+        </p>
+        <br/>
+        <h6 class="w4-center">Balkendiagramm</h6>
+        <p>Ein Balkendiagramm bietet eine effektive Möglichkeit, die Schwierigkeitsgrade der Kletterrouten in der ausgewählten Region zu vergleichen. 
+            Durch die Anordnung der Balken nach Schwierigkeitsgraden können Benutzer leicht ablesen, welche Grade in der Region am häufigsten vorkommen. 
+            Dies unterstützt die Kletterer bei der Auswahl von Routen, die ihrem Fähigkeitsniveau entsprechen.<br/>
         </p>
         <h5 class="w4-center">Prinzipien von Analytischem Design (nach Tufte)</h5>
             <h6 class="w4-center">Prinzip 1: Vergleichbarkeit</h6>
