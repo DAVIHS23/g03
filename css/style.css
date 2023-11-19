@@ -1,9 +1,16 @@
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body,h1,h2,h3,h4,h5,h6 {
+  color: #800a0a;
+  font-weight: 800;
+}
+
+
 body, html {
   height: 100%;
   color: #777;
   line-height: 1.8;
+  font-weight: 100;
 }
+
 
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .navbarbg {
@@ -27,11 +34,15 @@ body, html {
   min-height: 400px;
 }
 
+/* image in Flowtext */
+.img_skizze {
+  background-image: url('../img/Skizze_Dashboard_PowerBI.png');
+  width: center 30%;
+}
+
 .navbarbg{
     background-color: white;
 }
-
-
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
