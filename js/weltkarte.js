@@ -27,8 +27,8 @@ var colorScale = d3.scaleThreshold()
 
 // Load external data and boot
 d3.queue()
-    .defer(d3.json, "../datasource/world.geojson")
-    .defer(d3.csv, "../data/df_country_routes_counts.csv", 
+    .defer(d3.json, "datasource/world.geojson")
+    .defer(d3.csv, "data/df_country_routes_counts.csv", 
             function(d) {
                 data.set(d.country, +d.routes_count);})
     .await(ready);
