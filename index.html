@@ -11,10 +11,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Load D3 -->
-    <!-- <script src="https://d3js.org/d3.v4.js"></script> -->
-    <script src="https://d3js.org/d3.v7.js"></script>
-    <script src="https://d3js.org/d3-scale-chromatic.v3.min.js"></script>
-    <script src="https://d3js.org/d3-geo-projection.v4.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
 </head>
 <body>
     
@@ -77,7 +76,7 @@
         <p>Die nachfolgende Skizze zeigt unser im Power-BI erarbeitetes Dashboard mit den Kletter-Daten.</p><br/>
         <div class="container">
             <img src="img/Skizze_Dashboard_PowerBI.png" alt="Skizze Dashboard" width="100%">
-          </div>
+        </div>
         <br/>
         <br/>
 
@@ -86,10 +85,10 @@
         <br/>
         <h6>Länder:</h6>Es gibt für die westlichen Länder (Europa, Amerika) mehr veröffentlichte Kletterrouten. 
         Dies ist einerseits visuell auf der Weltkarte ersichtlich, da die Färbung der Länder zeigt, dass Kletterrouten 
-        in diesem Land vorhanden sind. Andererseite zeigt auch die Headmap, worin die Grösse der einzelnen Felder die Anzahl Kletterrouten 
+        in diesem Land vorhanden sind. Andererseite zeigt auch die Treemap, worin die Grösse der einzelnen Felder die Anzahl Kletterrouten 
         berücksichtigt, dass die Länder mit den grössten Feldern vorwiegend in Europa und Amerika liegen.<br/>
         <h6>Routen:</h6>Da es sehr viele Routen gibt, wurde die Visualisierung auf Stufe Crags beschränkt. Die Anzahl der 
-        Routen wird in der Grösse der Headmap-Felder visualisiert.
+        Routen wird in der Grösse der Treemap-Felder visualisiert.
         <br/>
         <h6>Schwierigkeitsgrad:</h6>Die im Datensatz verwendete Zahl für die Bezeichnung des Schwierigkeitsgrad (Wert zwischen 29 - 77) 
         ist für Kletterer nicht verständlich und somit für das Zielpublikum nicht sinnvoll. Die Französische Skala (Wert zwischen  5a - 9c) 
@@ -97,7 +96,6 @@
         französische Kletterskala übersetzt. Hierfür wurde die "grades_conversion_table" verwendet (siehe Abschnitt Daten).<br/>
         <br/>
                 Wir wünschen viel Spass beim eigenen Erkunden. Wo treffen wir uns? Let's climb the world!<br/>
-         
         </p>
     </div>
 
@@ -141,11 +139,14 @@
             haben wir die Schritte in einem Jupyter Notebook mit Python vorgenommen und dieses Notebook ist ebenfalls
             im <a href="https://github.com/DAVIHS23/g03" target="_blank" title="GitHub für Modul DAVI">GitHub</a> zugänglich.<br/>
             Zur einfachen Nachvollziehbarkeit dieser Seite erläutern wir nachfolgend die weichtigsten Mutationen:<br/>
-            - Dataset ISO-Country reduziert auf die benötigten 4 Informationen (Name, ISO-Code mit 3 Buchstaben, Kontinent, Unterregion)<br/>
-            - Schwierigkeitsgrade der Routen in Französischer Skala angeben<br/>
-            - Datensätze mit Land "ROM" wird geändert aud "ROU" (Rumänien), da es ROM gemäss ISO-Code nicht gibt.<br/>
-            - Tabelle Routen mit den ISO-Country Informationen ergänzt (die Normalisierung wurde somit faktisch rückgängig gemacht. 
-            Es erleichterte uns jedoch die Visualisierung).
+            <ul>
+                <li>Dataset ISO-Country reduziert auf die benötigten 4 Informationen (Name, ISO-Code mit 3 Buchstaben, Kontinent, Unterregion)</li>
+                <li>Schwierigkeitsgrade der Routen in Französischer Skala angeben</li>
+                <li>Abgleich, welche Länder-Codes im Climbing-Dataset vorhanden sind, aber im GeoJson für die Weltkarte fehlen. Diese (Andorra, Malta, Montesserat, Reunion) 
+                    wurden anschliessend manuell im world.geojson ergänzt (Original: world_origin.geojson; Korrigiert: world.geojson).</li>
+                <li>Im Routen-Datensatz werden die Tuples mit Land "ROM" auf "ROU" (Rumänien) geändert, da es ROM gemäss ISO-Code nicht gibt.</li>
+                <li>Tabelle Routen mit den ISO-Country Informationen ergänzt (die Normalisierung wurde somit faktisch rückgängig gemacht. Es erleichterte uns jedoch die Visualisierung).</li>
+            </ul>
     </div>
 
 <!-- SECTION VISUALIZATION -->
@@ -153,11 +154,12 @@
     <h3 class="w3-center">Visualisierung</h3>
     <h5 class="w4-center">Dashboard der Climbing-Daten</h5>
     <p>(Optimiert auf Full-Screen Windows)
-        <br/>
-        <br/>
+    <br/>
+    <!--Visualisierung der Karte mittels weltkarte.js-->
+    <svg width="800" height="400"></svg>
+    <div class="tooltip"></div>
+    <br/>
     </p>
-
-
 
 </div>
 
@@ -191,12 +193,12 @@
         <h5 class="w4-center">Prinzipien von Analytischem Design (nach Tufte)</h5>
             <h6 class="w4-center">Prinzip 1: Vergleichbarkeit</h6>
         <p>Mit Hilfe der interaktiven Weltkarte können Länder miteinander verglichen werden. Eine weitere Vergleichsmöglichkeit bietet die 
-            Brushing & Linking-Technik. Sobald eine Person mit der Maus auf ein Land klickt, wird in der Headmap die verschiedenen Klettergebiete angezeigt. Anhand dieser
+            Brushing & Linking-Technik. Sobald eine Person mit der Maus auf ein Land klickt, wird in der Treemap die verschiedenen Klettergebiete angezeigt. Anhand dieser
             Darstellung erleichtert es den Vergleich der Kletter-Regionen bezogen auf die Anzahl Kletterrouten. Zusätzlich kann die Person auch mit der Maus über 
-            das Land in der Weltkarte oder das Klettergebiet in der Headmap fahren und sieht dann gleichzeitig die Anzahl Routen.
+            das Land in der Weltkarte oder das Klettergebiet in der Treemap fahren und sieht dann gleichzeitig die Anzahl Routen.
         </p>
             <h6 class="w4-center">Prinzip 2: Kausalität</h6>
-        <p>Die Headmap erklärt, durch die Verwendung von variablen Massstäben, auf den ersten Blick, welche Klettergebiete über die meisten
+        <p>Die Treemap erklärt, durch die Verwendung von variablen Massstäben, auf den ersten Blick, welche Klettergebiete über die meisten
             Kletterrouten verfügt.
         </p>
             <h6 class="w4-center">Prinzip 3: Mehr-Variablen Analyse</h6>
@@ -221,7 +223,7 @@
             Data-Ink-Ratio zu maximieren. Ein höherer Anteil an Tinte, der direkt die Daten repräsentiert, führt zu klareren und effizienteren Grafiken. 
             Dieser Ansatz trägt dazu bei, dass visuelle Darstellungen genauer und informativer werden.<br/>
             Um dieses "Data-Ink-Ratio" so hoch wie möglich zu halten, wurde im Rahmen des Projektes angestrebt, nur die relevanten Informationen wie 
-            Weltkarte, Headmap und Balken farbig zu gestalten.
+            Weltkarte, Treemap und Balken farbig zu gestalten.
         </p>
         <h5 class="w4-center">Menschliche Wahrnehmung</h5>
         <p>Da Klettern das zentrale Thema unseres Projekts ist, wurden die Bilder auf der Homepage passend gewählt. Durch das einprägendes Bild mit der Treppe
@@ -231,17 +233,46 @@
             Auch die Farben wurden so gewählt, dass es für den User auf den ersten Blick als einansprechendes Design
             wahrgenommen wird.
         <h5 class="w4-center">Schritte in der Daten-Visualisierung</h5>
-            <h6 class="w4-center">Überblick zuerst</h6>
-        <p><br/>
-            <h6 class="w4-center">Zoomen und Filtern</h6>
-        <p><br/>
-            <h6 class="w4-center">Details nach Bedarf</h6>
-        <p><br/>
-        </p>
+        <p>Laut Jeffrey Heer und Ben Shneiderman lassen sich Datenvisualisierungen in drei Kategorien unterteilen:<br/> 
+            <ul><li>Spezifikation von Daten und Ansichten (visualisieren, filtern, sortieren, ableiten) - Um die Länder und Kontinente
+            einheitlich zu färben, mussten die Länder auf ISO3 und ISO3 auf Kontinent abgebildet werden.</li><br/>
+            <li>Manipulation von Ansichten (auswählen, navigieren, koordinieren, organisieren) - Wenn Sie auf das gewünschte Land zeigen, erscheint
+            eine entsprechende Legende, die sich mit dem Mauszeiger bewegt. Mit dem Schieberegler kann die mindestens Anzahl Kleterrouten eingestellt
+            werden. Auf diese Weise kann die Weltkarte bei Bedarf übersichtlicher dargestellt werden. Ausserdem werden mit der Treemap und 
+            dem Balkendiagramm mehrere Diagramme angezeigt, um einen möglichst klaren Überblick zu erhalten.</li><br/>
+            <li>Prozess und Herkunft (aufzeichnen, kommentieren, weierleiten, anleiten) - Die visuelle interpretation beschränkt sich nicht auf die
+            Erstellung und Bearbeitung von Visualisierungen, sondern umfasst eine Reihe von iterativen Datenexplorationen und Interpretationen.</li><br/>
+            </ul> 
+            Das bedeutet, dass für unser Projekt zunächst die Daten analysiert und ausgewählt wurden, um die relevanten Informationen
+            darzustellen. Mithilfe der Karte und der Treemap können diese Daten manipuliert werden, um ein möglichst genaues Bild 
+            zu erhalten. Darüber hinaus können auch zusätzliche Informationen abgerufen werden, um das Verständnis zu verbessern. 
+            Beispielsweise werden durch Legenden und ein Tooltip die detaillierten Daten dargestellt.
+        </p><br/>
         <h5 class="w4-center">Interaction Concept</h5>
-        <p><br/>
-        
+        <p>Die dritte Ebene der Visualisierung ist die Steuerung. Wie kann ich manipulieren und verfeinern? Zu diesem Zweck haben wir Punkte aus
+            Shneidermans Information Seeking Mantra wie folgt umgesetzt:
+            <ul>
+                <li><strong>Überblick</strong></li>
+                Verwenden Sie die Weltkarte, um sich einen ersten Überblick zu verschaffen. Das ist das erste, was man sieht. Wenn man mit der Maus darüber fährt, wird die Bevölkerung des jeweiligen Landes angezeigt.
+                <li><strong>Filter</strong></li>
+                Mit einem Schieberegler können Sie die minimale und maximale Bevölkerungszahl auswählen. Die maximale Bevölkerungszahl kann z.B. reduziert werden, um Länder wie China und Indien auszublenden, wodurch die Blasenkarte übersichtlicher wird. Ebenso können die Kontinente einzeln an- oder abgewählt werden.
+                <li><strong>Verbinden</strong></li>
+                Alle Länder eines Kontinents erhalten die gleiche Farbe, so dass man erkennen kann, welche Länder zusammengehören. Diese Kontinentalfarben werden auf die Bubble Map übertragen, damit Sie den Überblick behalten (Brush und Link).
+            </ul>
+        </p>
     </div>
+
+<!-- SECTION FINDINGS -->
+<div class="w3-content w3-container w3-padding-64" id="ref">
+    <h3 class="w3-center">Findings</h3>
+    <p>Basierend auf den Visualisierungn haben wir folgende Informationen gewonnen:<br/>
+    <ul>
+        <li> Es ist ersichtlich, dass in Asien sowie in Nord-/Zentralafrika keine Kletterrouten veröffentlicht sind.</li>
+        <li> Da die Autoren das Kletterniveau 6 haben, stehen ihnen insgesamt xxxx Routen zur Verfügung.</li>
+    </ul>
+</p>
+</div>
+
 
 <!-- SECTION REFERENCES -->
     <div class="w3-content w3-container w3-padding-64" id="ref">
@@ -251,10 +282,13 @@
         </p>
         <ul>
             <li><a href="https://d3js.org/" target="_blank">D3 Documentation</a></li>
+            <li><a href="https://d3-graph-gallery.com/graph/backgroundmap_changeprojection.html" target="_blank">Map of the World (Choropletz) with colorScale</a></li>
+            <li><a href="https://www.d3-graph-gallery.com/graph/choropleth_hover_effect.html" target="_blank">Choropleth map with hover effect</a></li>
+            <li><a href="https://d3-graph-gallery.com/interactivity.html" target="_blank">Interaktion wie Tooltip, Brushing, Buttons, Zooming</a></li>
+            <li><a href="" target="_blank">    </a></li>
+            <li><a href="" target="_blank">    </a></li>
+
             <li><a href="https://www.oreilly.com/library/view/interactive-data-visualization/9781491921296/" target="_blank">Interactive Data Visualization for the Web by Scott Murray</a></li>
-             <li><a href="https://www.d3-graph-gallery.com/graph/choropleth_hover_effect.html" target="_blank">Choropleth map with hover effect</a></li>
-             <li><a href="http://bl.ocks.org/palewire/d2906de347a160f38bc0b7ca57721328" target="_blank">World Choropleth</a></li>
-             <li><a href="http://bl.ocks.org/dougdowson/9832019" target="_blank">Choropleth</a></li>
         </ul>  
     </div>  
     
@@ -265,6 +299,10 @@
         <p><b>Corinne Walser-Schwarzentruber </b><br>Bsc in Wirtschaftsinformatik (I.BSCWI.1901)<br>Hochschule Luzern<br><a href="mailto:corinne.walser-schwarzentruber@stud.hslu.ch">E-Mail</a></p>    
         <p><b>Rajeepan Ratnasingam</b><br>Bsc in Wirtschaftsinformatik (I.BSCWI_F21.2001)<br>Hochschule Luzern<br><a href="mailto:rajeepan.ratnasingam@stud.hslu.ch">E-Mail</a></p>
     </div>  
+
+        <!-- JavaScript für die Visualisierungen -->
+        <script src="js/weltkarte.js"></script>
+
 
 </body>
 </html>
