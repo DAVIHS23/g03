@@ -1,0 +1,865 @@
+continent,country,country_name,grade_fra_reduced,routes_count
+Africa,MAR,Morocco,5c,1
+Africa,MAR,Morocco,6a,7
+Africa,MAR,Morocco,6a+,7
+Africa,MAR,Morocco,6b,1
+Africa,MAR,Morocco,6b+,1
+Africa,MAR,Morocco,7a,1
+Africa,MAR,Morocco,7a+,8
+Africa,MAR,Morocco,7b,2
+Africa,REU,Réunion,6a,1
+Africa,REU,Réunion,6c,1
+Africa,REU,Réunion,7a+,3
+Africa,REU,Réunion,7b,1
+Africa,REU,Réunion,7b+,1
+Africa,ZAF,South Africa,5a,58
+Africa,ZAF,South Africa,5b,55
+Africa,ZAF,South Africa,5c,31
+Africa,ZAF,South Africa,6a,75
+Africa,ZAF,South Africa,6a+,54
+Africa,ZAF,South Africa,6b,53
+Africa,ZAF,South Africa,6b+,55
+Africa,ZAF,South Africa,6c,49
+Africa,ZAF,South Africa,6c+,27
+Africa,ZAF,South Africa,7a,57
+Africa,ZAF,South Africa,7a+,41
+Africa,ZAF,South Africa,7b,40
+Africa,ZAF,South Africa,7b+,34
+Africa,ZAF,South Africa,7c,24
+Africa,ZAF,South Africa,7c+,14
+Africa,ZAF,South Africa,8a,7
+Africa,ZAF,South Africa,8a+,17
+Africa,ZAF,South Africa,8b,6
+Africa,ZAF,South Africa,8b+,3
+Africa,ZAF,South Africa,8c,1
+Americas,ARG,Argentina,5a,2
+Americas,ARG,Argentina,5b,6
+Americas,ARG,Argentina,5c,1
+Americas,ARG,Argentina,6a,17
+Americas,ARG,Argentina,6a+,19
+Americas,ARG,Argentina,6b,6
+Americas,ARG,Argentina,6b+,17
+Americas,ARG,Argentina,6c,12
+Americas,ARG,Argentina,6c+,3
+Americas,ARG,Argentina,7a,25
+Americas,ARG,Argentina,7a+,11
+Americas,ARG,Argentina,7b,17
+Americas,ARG,Argentina,7b+,7
+Americas,ARG,Argentina,7c,12
+Americas,ARG,Argentina,7c+,3
+Americas,ARG,Argentina,8a,3
+Americas,ARG,Argentina,8a+,5
+Americas,ARG,Argentina,8b,2
+Americas,ARG,Argentina,8b+,2
+Americas,ARG,Argentina,8c,1
+Americas,BRA,Brazil,5a,24
+Americas,BRA,Brazil,5b,26
+Americas,BRA,Brazil,5c,39
+Americas,BRA,Brazil,6a,96
+Americas,BRA,Brazil,6a+,108
+Americas,BRA,Brazil,6b,128
+Americas,BRA,Brazil,6b+,208
+Americas,BRA,Brazil,6c,194
+Americas,BRA,Brazil,6c+,78
+Americas,BRA,Brazil,7a,125
+Americas,BRA,Brazil,7a+,148
+Americas,BRA,Brazil,7b,110
+Americas,BRA,Brazil,7b+,73
+Americas,BRA,Brazil,7c,81
+Americas,BRA,Brazil,7c+,28
+Americas,BRA,Brazil,8a,22
+Americas,BRA,Brazil,8a+,6
+Americas,BRA,Brazil,8b,5
+Americas,BRA,Brazil,8b+,2
+Americas,BRA,Brazil,8c,2
+Americas,CAN,Canada,5a,40
+Americas,CAN,Canada,5b,43
+Americas,CAN,Canada,5c,15
+Americas,CAN,Canada,6a,73
+Americas,CAN,Canada,6a+,35
+Americas,CAN,Canada,6b,28
+Americas,CAN,Canada,6b+,44
+Americas,CAN,Canada,6c,63
+Americas,CAN,Canada,6c+,18
+Americas,CAN,Canada,7a,41
+Americas,CAN,Canada,7a+,63
+Americas,CAN,Canada,7b,41
+Americas,CAN,Canada,7b+,39
+Americas,CAN,Canada,7c,40
+Americas,CAN,Canada,7c+,16
+Americas,CAN,Canada,8a,11
+Americas,CAN,Canada,8a+,12
+Americas,CAN,Canada,8b,3
+Americas,CAN,Canada,8b+,2
+Americas,CAN,Canada,8c,1
+Americas,CAN,Canada,8c+,1
+Americas,CHL,Chile,6a,2
+Americas,CHL,Chile,6a+,1
+Americas,CHL,Chile,6b,2
+Americas,CHL,Chile,6b+,2
+Americas,CHL,Chile,6c,4
+Americas,CHL,Chile,7a,1
+Americas,CHL,Chile,7a+,3
+Americas,CHL,Chile,7b,5
+Americas,CHL,Chile,7b+,3
+Americas,CHL,Chile,7c,5
+Americas,CHL,Chile,7c+,5
+Americas,CHL,Chile,8a,2
+Americas,CHL,Chile,8a+,1
+Americas,COL,Colombia,5a,1
+Americas,COL,Colombia,5c,1
+Americas,COL,Colombia,6b,1
+Americas,COL,Colombia,7a+,2
+Americas,ECU,Ecuador,6a+,1
+Americas,MEX,Mexico,5a,5
+Americas,MEX,Mexico,5b,15
+Americas,MEX,Mexico,5c,10
+Americas,MEX,Mexico,6a,48
+Americas,MEX,Mexico,6a+,34
+Americas,MEX,Mexico,6b,28
+Americas,MEX,Mexico,6b+,25
+Americas,MEX,Mexico,6c,45
+Americas,MEX,Mexico,6c+,23
+Americas,MEX,Mexico,7a,33
+Americas,MEX,Mexico,7a+,68
+Americas,MEX,Mexico,7b,33
+Americas,MEX,Mexico,7b+,32
+Americas,MEX,Mexico,7c,34
+Americas,MEX,Mexico,7c+,30
+Americas,MEX,Mexico,8a,20
+Americas,MEX,Mexico,8a+,17
+Americas,MEX,Mexico,8b,14
+Americas,MEX,Mexico,8b+,7
+Americas,MEX,Mexico,8c+,1
+Americas,MSR,Montserrat,6c+,1
+Americas,MSR,Montserrat,7a+,1
+Americas,MSR,Montserrat,7b,1
+Americas,MSR,Montserrat,7c,1
+Americas,MSR,Montserrat,7c+,1
+Americas,MSR,Montserrat,8a+,1
+Americas,PER,Peru,5a,2
+Americas,PER,Peru,5b,3
+Americas,PER,Peru,5c,4
+Americas,PER,Peru,6a,14
+Americas,PER,Peru,6a+,9
+Americas,PER,Peru,6b,2
+Americas,PER,Peru,6b+,2
+Americas,PER,Peru,6c,3
+Americas,PER,Peru,7a,1
+Americas,PER,Peru,7a+,1
+Americas,PRI,Puerto Rico,6a,1
+Americas,PRI,Puerto Rico,6b,1
+Americas,PRI,Puerto Rico,7a,1
+Americas,USA,United States,5a,195
+Americas,USA,United States,5b,230
+Americas,USA,United States,5c,69
+Americas,USA,United States,6a,433
+Americas,USA,United States,6a+,245
+Americas,USA,United States,6b,204
+Americas,USA,United States,6b+,276
+Americas,USA,United States,6c,515
+Americas,USA,United States,6c+,169
+Americas,USA,United States,7a,274
+Americas,USA,United States,7a+,533
+Americas,USA,United States,7b,364
+Americas,USA,United States,7b+,292
+Americas,USA,United States,7c,197
+Americas,USA,United States,7c+,214
+Americas,USA,United States,8a,114
+Americas,USA,United States,8a+,109
+Americas,USA,United States,8b,55
+Americas,USA,United States,8b+,46
+Americas,USA,United States,8c,13
+Americas,USA,United States,8c+,13
+Americas,USA,United States,9a,4
+Americas,USA,United States,9a+,1
+Americas,USA,United States,9b,1
+Americas,VEN,Venezuela,5a,4
+Americas,VEN,Venezuela,5b,6
+Americas,VEN,Venezuela,5c,6
+Americas,VEN,Venezuela,6a,14
+Americas,VEN,Venezuela,6a+,8
+Americas,VEN,Venezuela,6b,8
+Americas,VEN,Venezuela,6b+,11
+Americas,VEN,Venezuela,6c,13
+Americas,VEN,Venezuela,6c+,4
+Americas,VEN,Venezuela,7a,5
+Americas,VEN,Venezuela,7a+,13
+Americas,VEN,Venezuela,7b,6
+Americas,VEN,Venezuela,7b+,5
+Americas,VEN,Venezuela,7c,5
+Americas,VEN,Venezuela,7c+,3
+Americas,VEN,Venezuela,8a,3
+Americas,VEN,Venezuela,8a+,1
+Asia,CHN,China,5b,1
+Asia,CHN,China,6a,6
+Asia,CHN,China,6a+,4
+Asia,CHN,China,6b,8
+Asia,CHN,China,6b+,7
+Asia,CHN,China,6c,7
+Asia,CHN,China,7a,10
+Asia,CHN,China,7a+,7
+Asia,CHN,China,7b,13
+Asia,CHN,China,7b+,4
+Asia,CHN,China,7c,9
+Asia,CHN,China,7c+,11
+Asia,CHN,China,8a,7
+Asia,CHN,China,8a+,8
+Asia,CHN,China,8b,2
+Asia,CHN,China,8b+,2
+Asia,CHN,China,8c+,1
+Asia,IND,India,6c+,1
+Asia,IND,India,7c+,1
+Asia,ISR,Israel,5a,1
+Asia,ISR,Israel,5b,1
+Asia,ISR,Israel,6a,8
+Asia,ISR,Israel,6a+,4
+Asia,ISR,Israel,6b,4
+Asia,ISR,Israel,6b+,6
+Asia,ISR,Israel,6c,3
+Asia,ISR,Israel,6c+,5
+Asia,ISR,Israel,7a,8
+Asia,ISR,Israel,7a+,11
+Asia,ISR,Israel,7b,3
+Asia,ISR,Israel,7b+,4
+Asia,ISR,Israel,7c,3
+Asia,ISR,Israel,7c+,5
+Asia,ISR,Israel,8a,9
+Asia,ISR,Israel,8a+,5
+Asia,ISR,Israel,8b,1
+Asia,ISR,Israel,8b+,2
+Asia,ISR,Israel,8c,1
+Asia,JOR,Jordan,5b,1
+Asia,JOR,Jordan,5c,1
+Asia,JOR,Jordan,6a+,2
+Asia,JOR,Jordan,7a,1
+Asia,JOR,Jordan,7a+,1
+Asia,LAO,Laos,5a,1
+Asia,LAO,Laos,5b,2
+Asia,LAO,Laos,5c,1
+Asia,LAO,Laos,6a,10
+Asia,LAO,Laos,6a+,4
+Asia,LAO,Laos,6b,7
+Asia,LAO,Laos,6b+,4
+Asia,LAO,Laos,6c,6
+Asia,LAO,Laos,7a,11
+Asia,LAO,Laos,7a+,1
+Asia,LAO,Laos,7b,5
+Asia,LAO,Laos,7b+,4
+Asia,LAO,Laos,7c,5
+Asia,LAO,Laos,7c+,2
+Asia,LAO,Laos,8a,1
+Asia,LAO,Laos,8a+,1
+Asia,PHL,Philippines,6c,1
+Asia,THA,Thailand,5a,4
+Asia,THA,Thailand,5b,10
+Asia,THA,Thailand,6a,41
+Asia,THA,Thailand,6a+,55
+Asia,THA,Thailand,6b,33
+Asia,THA,Thailand,6b+,34
+Asia,THA,Thailand,6c,35
+Asia,THA,Thailand,6c+,13
+Asia,THA,Thailand,7a,43
+Asia,THA,Thailand,7a+,47
+Asia,THA,Thailand,7b,40
+Asia,THA,Thailand,7b+,12
+Asia,THA,Thailand,7c,25
+Asia,THA,Thailand,7c+,16
+Asia,THA,Thailand,8a,12
+Asia,THA,Thailand,8a+,10
+Asia,THA,Thailand,8b,6
+Asia,THA,Thailand,8b+,5
+Asia,THA,Thailand,8c,2
+Asia,THA,Thailand,8c+,1
+Asia,TUR,Turkey,5a,23
+Asia,TUR,Turkey,5b,25
+Asia,TUR,Turkey,5c,16
+Asia,TUR,Turkey,6a,67
+Asia,TUR,Turkey,6a+,50
+Asia,TUR,Turkey,6b,43
+Asia,TUR,Turkey,6b+,46
+Asia,TUR,Turkey,6c,50
+Asia,TUR,Turkey,6c+,20
+Asia,TUR,Turkey,7a,73
+Asia,TUR,Turkey,7a+,53
+Asia,TUR,Turkey,7b,52
+Asia,TUR,Turkey,7b+,56
+Asia,TUR,Turkey,7c,47
+Asia,TUR,Turkey,7c+,31
+Asia,TUR,Turkey,8a,34
+Asia,TUR,Turkey,8a+,24
+Asia,TUR,Turkey,8b,12
+Asia,TUR,Turkey,8b+,11
+Asia,TWN,Taiwan,6b+,2
+Asia,TWN,Taiwan,7b+,1
+Asia,VNM,Vietnam,6a,2
+Asia,VNM,Vietnam,6a+,1
+Asia,VNM,Vietnam,6b+,2
+Asia,VNM,Vietnam,6c,2
+Asia,VNM,Vietnam,6c+,1
+Asia,VNM,Vietnam,7a+,1
+Asia,VNM,Vietnam,7b,1
+Europe,AND,Andorra,6c,1
+Europe,AND,Andorra,7a,3
+Europe,AUT,Austria,5a,62
+Europe,AUT,Austria,5b,89
+Europe,AUT,Austria,5c,32
+Europe,AUT,Austria,6a,281
+Europe,AUT,Austria,6a+,174
+Europe,AUT,Austria,6b,152
+Europe,AUT,Austria,6b+,158
+Europe,AUT,Austria,6c,170
+Europe,AUT,Austria,6c+,69
+Europe,AUT,Austria,7a,197
+Europe,AUT,Austria,7a+,125
+Europe,AUT,Austria,7b,131
+Europe,AUT,Austria,7b+,125
+Europe,AUT,Austria,7c,117
+Europe,AUT,Austria,7c+,85
+Europe,AUT,Austria,8a,68
+Europe,AUT,Austria,8a+,51
+Europe,AUT,Austria,8b,28
+Europe,AUT,Austria,8b+,23
+Europe,AUT,Austria,8c,14
+Europe,AUT,Austria,8c+,7
+Europe,AUT,Austria,9a+,1
+Europe,BEL,Belgium,5a,46
+Europe,BEL,Belgium,5b,40
+Europe,BEL,Belgium,5c,21
+Europe,BEL,Belgium,6a,96
+Europe,BEL,Belgium,6a+,48
+Europe,BEL,Belgium,6b,35
+Europe,BEL,Belgium,6b+,24
+Europe,BEL,Belgium,6c,18
+Europe,BEL,Belgium,6c+,11
+Europe,BEL,Belgium,7a,40
+Europe,BEL,Belgium,7a+,30
+Europe,BEL,Belgium,7b,21
+Europe,BEL,Belgium,7b+,13
+Europe,BEL,Belgium,7c,13
+Europe,BEL,Belgium,7c+,8
+Europe,BEL,Belgium,8a,9
+Europe,BEL,Belgium,8a+,5
+Europe,BEL,Belgium,8b,6
+Europe,BEL,Belgium,8b+,2
+Europe,BGR,Bulgaria,5a,11
+Europe,BGR,Bulgaria,5b,18
+Europe,BGR,Bulgaria,5c,16
+Europe,BGR,Bulgaria,6a,43
+Europe,BGR,Bulgaria,6a+,42
+Europe,BGR,Bulgaria,6b,33
+Europe,BGR,Bulgaria,6b+,26
+Europe,BGR,Bulgaria,6c,17
+Europe,BGR,Bulgaria,6c+,25
+Europe,BGR,Bulgaria,7a,31
+Europe,BGR,Bulgaria,7a+,27
+Europe,BGR,Bulgaria,7b,29
+Europe,BGR,Bulgaria,7b+,30
+Europe,BGR,Bulgaria,7c,27
+Europe,BGR,Bulgaria,7c+,14
+Europe,BGR,Bulgaria,8a,12
+Europe,BGR,Bulgaria,8a+,14
+Europe,BGR,Bulgaria,8b,13
+Europe,BGR,Bulgaria,8b+,5
+Europe,BIH,Bosnia And Herzegovina,6a+,1
+Europe,BIH,Bosnia And Herzegovina,6c,1
+Europe,BIH,Bosnia And Herzegovina,6c+,1
+Europe,CHE,Switzerland,5a,10
+Europe,CHE,Switzerland,5b,22
+Europe,CHE,Switzerland,5c,8
+Europe,CHE,Switzerland,6a,77
+Europe,CHE,Switzerland,6a+,59
+Europe,CHE,Switzerland,6b,64
+Europe,CHE,Switzerland,6b+,69
+Europe,CHE,Switzerland,6c,56
+Europe,CHE,Switzerland,6c+,22
+Europe,CHE,Switzerland,7a,108
+Europe,CHE,Switzerland,7a+,57
+Europe,CHE,Switzerland,7b,85
+Europe,CHE,Switzerland,7b+,45
+Europe,CHE,Switzerland,7c,58
+Europe,CHE,Switzerland,7c+,22
+Europe,CHE,Switzerland,8a,27
+Europe,CHE,Switzerland,8a+,11
+Europe,CHE,Switzerland,8b,10
+Europe,CHE,Switzerland,8b+,4
+Europe,CHE,Switzerland,8c,2
+Europe,CHE,Switzerland,8c+,1
+Europe,CZE,Czech Republic,5c,1
+Europe,CZE,Czech Republic,6a,1
+Europe,CZE,Czech Republic,6a+,3
+Europe,CZE,Czech Republic,6b,2
+Europe,CZE,Czech Republic,6c,1
+Europe,CZE,Czech Republic,7a,3
+Europe,CZE,Czech Republic,7a+,2
+Europe,CZE,Czech Republic,7b,2
+Europe,CZE,Czech Republic,7b+,4
+Europe,CZE,Czech Republic,7c,2
+Europe,CZE,Czech Republic,7c+,3
+Europe,CZE,Czech Republic,8a,1
+Europe,DEU,Germany,5a,149
+Europe,DEU,Germany,5b,135
+Europe,DEU,Germany,5c,87
+Europe,DEU,Germany,6a,402
+Europe,DEU,Germany,6a+,286
+Europe,DEU,Germany,6b,205
+Europe,DEU,Germany,6b+,178
+Europe,DEU,Germany,6c,217
+Europe,DEU,Germany,6c+,123
+Europe,DEU,Germany,7a,269
+Europe,DEU,Germany,7a+,176
+Europe,DEU,Germany,7b,90
+Europe,DEU,Germany,7b+,174
+Europe,DEU,Germany,7c,127
+Europe,DEU,Germany,7c+,63
+Europe,DEU,Germany,8a,50
+Europe,DEU,Germany,8a+,48
+Europe,DEU,Germany,8b,45
+Europe,DEU,Germany,8b+,20
+Europe,DEU,Germany,8c,17
+Europe,DEU,Germany,8c+,6
+Europe,DEU,Germany,9a+,1
+Europe,DNK,Denmark,5a,5
+Europe,DNK,Denmark,5b,3
+Europe,DNK,Denmark,6a,3
+Europe,DNK,Denmark,6a+,4
+Europe,DNK,Denmark,6b,1
+Europe,DNK,Denmark,6c+,1
+Europe,DNK,Denmark,7a,1
+Europe,DNK,Denmark,7a+,2
+Europe,ESP,Spain,5a,333
+Europe,ESP,Spain,5b,534
+Europe,ESP,Spain,5c,222
+Europe,ESP,Spain,6a,1733
+Europe,ESP,Spain,6a+,1107
+Europe,ESP,Spain,6b,1104
+Europe,ESP,Spain,6b+,1154
+Europe,ESP,Spain,6c,952
+Europe,ESP,Spain,6c+,460
+Europe,ESP,Spain,7a,1591
+Europe,ESP,Spain,7a+,1244
+Europe,ESP,Spain,7b,1177
+Europe,ESP,Spain,7b+,952
+Europe,ESP,Spain,7c,731
+Europe,ESP,Spain,7c+,521
+Europe,ESP,Spain,8a,519
+Europe,ESP,Spain,8a+,445
+Europe,ESP,Spain,8b,234
+Europe,ESP,Spain,8b+,133
+Europe,ESP,Spain,8c,75
+Europe,ESP,Spain,8c+,47
+Europe,ESP,Spain,9a,12
+Europe,ESP,Spain,9a+,11
+Europe,ESP,Spain,9b,2
+Europe,FIN,Finland,5a,2
+Europe,FIN,Finland,6a,4
+Europe,FIN,Finland,6a+,1
+Europe,FIN,Finland,6b+,1
+Europe,FRA,France,5a,55
+Europe,FRA,France,5b,84
+Europe,FRA,France,5c,45
+Europe,FRA,France,6a,291
+Europe,FRA,France,6a+,180
+Europe,FRA,France,6b,189
+Europe,FRA,France,6b+,259
+Europe,FRA,France,6c,195
+Europe,FRA,France,6c+,102
+Europe,FRA,France,7a,441
+Europe,FRA,France,7a+,377
+Europe,FRA,France,7b,397
+Europe,FRA,France,7b+,292
+Europe,FRA,France,7c,309
+Europe,FRA,France,7c+,237
+Europe,FRA,France,8a,252
+Europe,FRA,France,8a+,224
+Europe,FRA,France,8b,134
+Europe,FRA,France,8b+,70
+Europe,FRA,France,8c,37
+Europe,FRA,France,8c+,19
+Europe,FRA,France,9a,4
+Europe,FRA,France,9a+,3
+Europe,FRA,France,9b,2
+Europe,GBR,United Kingdom,5a,16
+Europe,GBR,United Kingdom,5b,5
+Europe,GBR,United Kingdom,5c,2
+Europe,GBR,United Kingdom,6a,42
+Europe,GBR,United Kingdom,6a+,29
+Europe,GBR,United Kingdom,6b,24
+Europe,GBR,United Kingdom,6b+,26
+Europe,GBR,United Kingdom,6c,18
+Europe,GBR,United Kingdom,6c+,5
+Europe,GBR,United Kingdom,7a,68
+Europe,GBR,United Kingdom,7a+,53
+Europe,GBR,United Kingdom,7b,41
+Europe,GBR,United Kingdom,7b+,32
+Europe,GBR,United Kingdom,7c,21
+Europe,GBR,United Kingdom,7c+,14
+Europe,GBR,United Kingdom,8a,18
+Europe,GBR,United Kingdom,8a+,9
+Europe,GBR,United Kingdom,8b,4
+Europe,GRC,Greece,5a,64
+Europe,GRC,Greece,5b,99
+Europe,GRC,Greece,5c,53
+Europe,GRC,Greece,6a,267
+Europe,GRC,Greece,6a+,195
+Europe,GRC,Greece,6b,170
+Europe,GRC,Greece,6b+,190
+Europe,GRC,Greece,6c,160
+Europe,GRC,Greece,6c+,75
+Europe,GRC,Greece,7a,142
+Europe,GRC,Greece,7a+,135
+Europe,GRC,Greece,7b,119
+Europe,GRC,Greece,7b+,100
+Europe,GRC,Greece,7c,101
+Europe,GRC,Greece,7c+,67
+Europe,GRC,Greece,8a,55
+Europe,GRC,Greece,8a+,46
+Europe,GRC,Greece,8b,32
+Europe,GRC,Greece,8b+,14
+Europe,GRC,Greece,8c,6
+Europe,GRC,Greece,8c+,3
+Europe,HRV,Croatia,5a,48
+Europe,HRV,Croatia,5b,47
+Europe,HRV,Croatia,5c,31
+Europe,HRV,Croatia,6a,114
+Europe,HRV,Croatia,6a+,67
+Europe,HRV,Croatia,6b,49
+Europe,HRV,Croatia,6b+,57
+Europe,HRV,Croatia,6c,34
+Europe,HRV,Croatia,6c+,26
+Europe,HRV,Croatia,7a,46
+Europe,HRV,Croatia,7a+,45
+Europe,HRV,Croatia,7b,52
+Europe,HRV,Croatia,7b+,27
+Europe,HRV,Croatia,7c,25
+Europe,HRV,Croatia,7c+,11
+Europe,HRV,Croatia,8a,12
+Europe,HRV,Croatia,8a+,6
+Europe,HRV,Croatia,8b,6
+Europe,HRV,Croatia,8b+,4
+Europe,HUN,Hungary,5a,9
+Europe,HUN,Hungary,5b,6
+Europe,HUN,Hungary,5c,5
+Europe,HUN,Hungary,6a,28
+Europe,HUN,Hungary,6a+,12
+Europe,HUN,Hungary,6b,9
+Europe,HUN,Hungary,6b+,4
+Europe,HUN,Hungary,6c,5
+Europe,HUN,Hungary,6c+,10
+Europe,HUN,Hungary,7a,9
+Europe,HUN,Hungary,7a+,9
+Europe,HUN,Hungary,7b,9
+Europe,HUN,Hungary,7b+,11
+Europe,HUN,Hungary,7c,13
+Europe,HUN,Hungary,7c+,3
+Europe,HUN,Hungary,8a+,7
+Europe,HUN,Hungary,8b,9
+Europe,HUN,Hungary,8b+,4
+Europe,HUN,Hungary,8c,1
+Europe,ISL,Iceland,5a,2
+Europe,ISL,Iceland,5b,4
+Europe,ISL,Iceland,5c,1
+Europe,ISL,Iceland,6a,3
+Europe,ISL,Iceland,6a+,2
+Europe,ISL,Iceland,6b,1
+Europe,ISL,Iceland,6b+,3
+Europe,ISL,Iceland,6c,1
+Europe,ISL,Iceland,6c+,1
+Europe,ISL,Iceland,7a,1
+Europe,ISL,Iceland,7a+,2
+Europe,ISL,Iceland,7b,2
+Europe,ISL,Iceland,7b+,3
+Europe,ITA,Italy,5a,189
+Europe,ITA,Italy,5b,256
+Europe,ITA,Italy,5c,103
+Europe,ITA,Italy,6a,841
+Europe,ITA,Italy,6a+,549
+Europe,ITA,Italy,6b,506
+Europe,ITA,Italy,6b+,502
+Europe,ITA,Italy,6c,429
+Europe,ITA,Italy,6c+,186
+Europe,ITA,Italy,7a,647
+Europe,ITA,Italy,7a+,481
+Europe,ITA,Italy,7b,440
+Europe,ITA,Italy,7b+,331
+Europe,ITA,Italy,7c,315
+Europe,ITA,Italy,7c+,171
+Europe,ITA,Italy,8a,206
+Europe,ITA,Italy,8a+,128
+Europe,ITA,Italy,8b,76
+Europe,ITA,Italy,8b+,31
+Europe,ITA,Italy,8c,21
+Europe,ITA,Italy,8c+,9
+Europe,ITA,Italy,9a,2
+Europe,ITA,Italy,9a+,4
+Europe,LUX,Luxembourg,5b,2
+Europe,LUX,Luxembourg,6a,1
+Europe,LUX,Luxembourg,6a+,1
+Europe,LUX,Luxembourg,6b,1
+Europe,LUX,Luxembourg,6b+,2
+Europe,LUX,Luxembourg,6c,1
+Europe,LUX,Luxembourg,6c+,2
+Europe,LUX,Luxembourg,7a,4
+Europe,LUX,Luxembourg,7a+,1
+Europe,LUX,Luxembourg,7b,4
+Europe,LUX,Luxembourg,7b+,3
+Europe,LUX,Luxembourg,7c,5
+Europe,LUX,Luxembourg,7c+,5
+Europe,LUX,Luxembourg,8a,1
+Europe,LUX,Luxembourg,8a+,2
+Europe,LUX,Luxembourg,8b,1
+Europe,MKD,Macedonia,6a,2
+Europe,MKD,Macedonia,6b,1
+Europe,MKD,Macedonia,6c,2
+Europe,MKD,Macedonia,7a+,1
+Europe,MKD,Macedonia,7b,1
+Europe,MLT,Malta,5a,1
+Europe,MLT,Malta,5b,1
+Europe,MLT,Malta,5c,1
+Europe,MLT,Malta,6a,1
+Europe,MLT,Malta,6b+,2
+Europe,MLT,Malta,7a,1
+Europe,MLT,Malta,7a+,1
+Europe,MLT,Malta,7b,1
+Europe,NLD,Netherlands,6a,2
+Europe,NLD,Netherlands,7a+,1
+Europe,NOR,Norway,5a,62
+Europe,NOR,Norway,5b,44
+Europe,NOR,Norway,5c,18
+Europe,NOR,Norway,6a,67
+Europe,NOR,Norway,6a+,70
+Europe,NOR,Norway,6b,98
+Europe,NOR,Norway,6b+,120
+Europe,NOR,Norway,6c,103
+Europe,NOR,Norway,6c+,16
+Europe,NOR,Norway,7a,73
+Europe,NOR,Norway,7a+,38
+Europe,NOR,Norway,7b,71
+Europe,NOR,Norway,7b+,48
+Europe,NOR,Norway,7c,48
+Europe,NOR,Norway,7c+,32
+Europe,NOR,Norway,8a,19
+Europe,NOR,Norway,8a+,11
+Europe,NOR,Norway,8b,15
+Europe,NOR,Norway,8b+,3
+Europe,NOR,Norway,8c,3
+Europe,NOR,Norway,8c+,3
+Europe,NOR,Norway,9b,1
+Europe,POL,Poland,5a,227
+Europe,POL,Poland,5b,215
+Europe,POL,Poland,5c,88
+Europe,POL,Poland,6a,642
+Europe,POL,Poland,6a+,490
+Europe,POL,Poland,6b,460
+Europe,POL,Poland,6b+,425
+Europe,POL,Poland,6c,324
+Europe,POL,Poland,6c+,116
+Europe,POL,Poland,7a,302
+Europe,POL,Poland,7a+,234
+Europe,POL,Poland,7b,175
+Europe,POL,Poland,7b+,92
+Europe,POL,Poland,7c,104
+Europe,POL,Poland,7c+,111
+Europe,POL,Poland,8a,44
+Europe,POL,Poland,8a+,36
+Europe,POL,Poland,8b,24
+Europe,POL,Poland,8b+,26
+Europe,POL,Poland,8c,8
+Europe,POL,Poland,8c+,4
+Europe,POL,Poland,9a,2
+Europe,PRT,Portugal,5a,25
+Europe,PRT,Portugal,5b,28
+Europe,PRT,Portugal,5c,15
+Europe,PRT,Portugal,6a,97
+Europe,PRT,Portugal,6a+,48
+Europe,PRT,Portugal,6b,43
+Europe,PRT,Portugal,6b+,41
+Europe,PRT,Portugal,6c,37
+Europe,PRT,Portugal,6c+,13
+Europe,PRT,Portugal,7a,50
+Europe,PRT,Portugal,7a+,44
+Europe,PRT,Portugal,7b,44
+Europe,PRT,Portugal,7b+,45
+Europe,PRT,Portugal,7c,23
+Europe,PRT,Portugal,7c+,21
+Europe,PRT,Portugal,8a,12
+Europe,PRT,Portugal,8a+,2
+Europe,PRT,Portugal,8b,2
+Europe,PRT,Portugal,8b+,1
+Europe,ROU,Romania,5a,29
+Europe,ROU,Romania,5b,19
+Europe,ROU,Romania,5c,22
+Europe,ROU,Romania,6a,87
+Europe,ROU,Romania,6a+,54
+Europe,ROU,Romania,6b,49
+Europe,ROU,Romania,6b+,25
+Europe,ROU,Romania,6c,31
+Europe,ROU,Romania,6c+,22
+Europe,ROU,Romania,7a,43
+Europe,ROU,Romania,7a+,31
+Europe,ROU,Romania,7b,19
+Europe,ROU,Romania,7b+,32
+Europe,ROU,Romania,7c,33
+Europe,ROU,Romania,7c+,28
+Europe,ROU,Romania,8a,23
+Europe,ROU,Romania,8a+,13
+Europe,ROU,Romania,8b,4
+Europe,ROU,Romania,8b+,3
+Europe,RUS,Russia,5a,4
+Europe,RUS,Russia,5b,15
+Europe,RUS,Russia,5c,4
+Europe,RUS,Russia,6a,40
+Europe,RUS,Russia,6a+,37
+Europe,RUS,Russia,6b,19
+Europe,RUS,Russia,6b+,30
+Europe,RUS,Russia,6c,21
+Europe,RUS,Russia,6c+,9
+Europe,RUS,Russia,7a,19
+Europe,RUS,Russia,7a+,22
+Europe,RUS,Russia,7b,19
+Europe,RUS,Russia,7b+,16
+Europe,RUS,Russia,7c,15
+Europe,RUS,Russia,7c+,5
+Europe,RUS,Russia,8a,8
+Europe,RUS,Russia,8a+,5
+Europe,RUS,Russia,8b,1
+Europe,RUS,Russia,8b+,1
+Europe,SRB,Serbia,5a,12
+Europe,SRB,Serbia,5b,9
+Europe,SRB,Serbia,5c,5
+Europe,SRB,Serbia,6a,13
+Europe,SRB,Serbia,6a+,10
+Europe,SRB,Serbia,6b,16
+Europe,SRB,Serbia,6b+,10
+Europe,SRB,Serbia,6c,11
+Europe,SRB,Serbia,6c+,7
+Europe,SRB,Serbia,7a,14
+Europe,SRB,Serbia,7a+,11
+Europe,SRB,Serbia,7b,10
+Europe,SRB,Serbia,7b+,8
+Europe,SRB,Serbia,7c,4
+Europe,SRB,Serbia,7c+,6
+Europe,SRB,Serbia,8a,5
+Europe,SRB,Serbia,8a+,6
+Europe,SRB,Serbia,8b,1
+Europe,SVK,Slovakia,5a,5
+Europe,SVK,Slovakia,5b,1
+Europe,SVK,Slovakia,5c,2
+Europe,SVK,Slovakia,6a,9
+Europe,SVK,Slovakia,6a+,9
+Europe,SVK,Slovakia,6b,4
+Europe,SVK,Slovakia,6b+,1
+Europe,SVK,Slovakia,6c,4
+Europe,SVK,Slovakia,6c+,4
+Europe,SVK,Slovakia,7a,6
+Europe,SVK,Slovakia,7a+,5
+Europe,SVK,Slovakia,7b,1
+Europe,SVK,Slovakia,7b+,3
+Europe,SVK,Slovakia,7c,2
+Europe,SVK,Slovakia,7c+,1
+Europe,SVK,Slovakia,8a,2
+Europe,SVK,Slovakia,8a+,4
+Europe,SVN,Slovenia,5a,30
+Europe,SVN,Slovenia,5b,38
+Europe,SVN,Slovenia,5c,17
+Europe,SVN,Slovenia,6a,95
+Europe,SVN,Slovenia,6a+,70
+Europe,SVN,Slovenia,6b,64
+Europe,SVN,Slovenia,6b+,63
+Europe,SVN,Slovenia,6c,69
+Europe,SVN,Slovenia,6c+,24
+Europe,SVN,Slovenia,7a,79
+Europe,SVN,Slovenia,7a+,66
+Europe,SVN,Slovenia,7b,63
+Europe,SVN,Slovenia,7b+,60
+Europe,SVN,Slovenia,7c,43
+Europe,SVN,Slovenia,7c+,32
+Europe,SVN,Slovenia,8a,30
+Europe,SVN,Slovenia,8a+,35
+Europe,SVN,Slovenia,8b,22
+Europe,SVN,Slovenia,8b+,23
+Europe,SVN,Slovenia,8c,10
+Europe,SVN,Slovenia,8c+,8
+Europe,SVN,Slovenia,9a,3
+Europe,SVN,Slovenia,9a+,2
+Europe,SWE,Sweden,5a,37
+Europe,SWE,Sweden,5b,33
+Europe,SWE,Sweden,5c,14
+Europe,SWE,Sweden,6a,71
+Europe,SWE,Sweden,6a+,36
+Europe,SWE,Sweden,6b,60
+Europe,SWE,Sweden,6b+,55
+Europe,SWE,Sweden,6c,44
+Europe,SWE,Sweden,6c+,14
+Europe,SWE,Sweden,7a,33
+Europe,SWE,Sweden,7a+,18
+Europe,SWE,Sweden,7b,28
+Europe,SWE,Sweden,7b+,19
+Europe,SWE,Sweden,7c,12
+Europe,SWE,Sweden,7c+,10
+Europe,SWE,Sweden,8a,12
+Europe,SWE,Sweden,8a+,6
+Europe,SWE,Sweden,8b,4
+Europe,UKR,Ukraine,5a,13
+Europe,UKR,Ukraine,5b,10
+Europe,UKR,Ukraine,5c,5
+Europe,UKR,Ukraine,6a,32
+Europe,UKR,Ukraine,6a+,24
+Europe,UKR,Ukraine,6b,32
+Europe,UKR,Ukraine,6b+,25
+Europe,UKR,Ukraine,6c,27
+Europe,UKR,Ukraine,6c+,19
+Europe,UKR,Ukraine,7a,30
+Europe,UKR,Ukraine,7a+,26
+Europe,UKR,Ukraine,7b,29
+Europe,UKR,Ukraine,7b+,23
+Europe,UKR,Ukraine,7c,22
+Europe,UKR,Ukraine,7c+,10
+Europe,UKR,Ukraine,8a,5
+Europe,UKR,Ukraine,8a+,14
+Europe,UKR,Ukraine,8b,5
+Europe,UKR,Ukraine,8b+,2
+Europe,UKR,Ukraine,8c,2
+Europe,UKR,Ukraine,8c+,1
+Europe,UKR,Ukraine,9a,1
+Oceania,AUS,Australia,5a,21
+Oceania,AUS,Australia,5b,18
+Oceania,AUS,Australia,5c,20
+Oceania,AUS,Australia,6a,60
+Oceania,AUS,Australia,6a+,28
+Oceania,AUS,Australia,6b,43
+Oceania,AUS,Australia,6b+,40
+Oceania,AUS,Australia,6c,59
+Oceania,AUS,Australia,6c+,24
+Oceania,AUS,Australia,7a,95
+Oceania,AUS,Australia,7a+,94
+Oceania,AUS,Australia,7b,106
+Oceania,AUS,Australia,7b+,78
+Oceania,AUS,Australia,7c,56
+Oceania,AUS,Australia,7c+,43
+Oceania,AUS,Australia,8a,21
+Oceania,AUS,Australia,8a+,38
+Oceania,AUS,Australia,8b,25
+Oceania,AUS,Australia,8b+,19
+Oceania,AUS,Australia,8c,10
+Oceania,AUS,Australia,8c+,2
+Oceania,NZL,New Zealand,5a,22
+Oceania,NZL,New Zealand,5b,19
+Oceania,NZL,New Zealand,5c,21
+Oceania,NZL,New Zealand,6a,32
+Oceania,NZL,New Zealand,6a+,15
+Oceania,NZL,New Zealand,6b,14
+Oceania,NZL,New Zealand,6b+,17
+Oceania,NZL,New Zealand,6c,21
+Oceania,NZL,New Zealand,6c+,7
+Oceania,NZL,New Zealand,7a,42
+Oceania,NZL,New Zealand,7a+,49
+Oceania,NZL,New Zealand,7b,31
+Oceania,NZL,New Zealand,7b+,28
+Oceania,NZL,New Zealand,7c,18
+Oceania,NZL,New Zealand,7c+,14
+Oceania,NZL,New Zealand,8a,8
+Oceania,NZL,New Zealand,8a+,6
+Oceania,NZL,New Zealand,8b,4
+Oceania,NZL,New Zealand,8b+,2
+Oceania,NZL,New Zealand,8c,1

@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Load D3 -->
-    <script src="https://d3js.org/d3.v4.js"></script>
-    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3.v7.js"></script>
     <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
 </head>
 <body>
@@ -151,17 +150,27 @@
     </div>
 
 <!-- SECTION VISUALIZATION -->
-<div class="w3-content w3-container w3-padding-64" id="viz">
-    <h3 class="w3-center">Visualisierung</h3>
-    <h5 class="w4-center">Dashboard der Climbing-Daten</h5>
-    <p>(Optimiert auf Full-Screen Windows)
-    <br/>
-    <!--Visualisierung der Karte mittels weltkarte.js-->
-    <svg width="800" height="400"></svg>
-    <div class="tooltip"></div>
-    <br/>
-    </p>
-
+<div class="w3-container">
+    <div class="w3-row w3-content ">
+        <h3 class="w3-center">Visualisierung</h3>
+        <h5 class="w4-center">Dashboard der Climbing-Daten</h5>
+        <p>(Optimiert auf Full-Screen Windows)
+            <br/>
+            <!--Visualisierung der Weltkarte mittels weltkarte.js-->
+            <svg class="worldmap" id="my_worldmap" width="800" height="500"></svg>
+            <div class="tooltip"></div>
+        </p>
+    </div>
+    <div class="w3-row">
+        <div class="w3-container w3-half">
+            <!--Visualisierung der Treemap mittels treemap.js-->
+            <svg class="treemap" id="my_treemap" width="600" height="600"></svg>
+        </div>
+        <div class="w3-container w3-half">
+            <!--Visualisierung der Barchart mittels barchart.js-->
+            <svg class="barchart" id="my_barchart" width="600" height="600"></svg>
+        </div>
+    </div>
 </div>
 
 <!-- SECTION DESIGN -->
@@ -286,7 +295,7 @@
             <li><a href="https://d3-graph-gallery.com/graph/backgroundmap_changeprojection.html" target="_blank">Map of the World (Choropletz) with colorScale</a></li>
             <li><a href="https://www.d3-graph-gallery.com/graph/choropleth_hover_effect.html" target="_blank">Choropleth map with hover effect</a></li>
             <li><a href="https://d3-graph-gallery.com/interactivity.html" target="_blank">Interaktion wie Tooltip, Brushing, Buttons, Zooming</a></li>
-            <li><a href="" target="_blank">    </a></li>
+            <li><a href="https://d3-graph-gallery.com/graph/barplot_button_data_csv.html" target="_blank">Barchart</a></li>
             <li><a href="" target="_blank">    </a></li>
 
             <li><a href="https://www.oreilly.com/library/view/interactive-data-visualization/9781491921296/" target="_blank">Interactive Data Visualization for the Web by Scott Murray</a></li>
@@ -301,9 +310,10 @@
         <p><b>Rajeepan Ratnasingam</b><br>Bsc in Wirtschaftsinformatik (I.BSCWI_F21.2001)<br>Hochschule Luzern<br><a href="mailto:rajeepan.ratnasingam@stud.hslu.ch">E-Mail</a></p>
     </div>  
 
-        <!-- JavaScript für die Visualisierungen -->
-        <script src="js/weltkarte.js"></script>
-
+<!-- JavaScript für die Visualisierungen -->
+<script src="js/weltkarte.js"></script>
+<script src="js/treemap.js"></script>
+<script src="js/barchart.js"></script>
 
 </body>
 </html>
