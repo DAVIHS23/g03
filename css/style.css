@@ -16,9 +16,12 @@ ul {
 }
 
 svg.worldmap {
+  padding: 0px;
   width: 100%;
   height: 100%;
   background-color: #c0e0f3;
+  left: 50%;
+  top: 50%;
 }
 
 svg.treemap {
@@ -33,11 +36,6 @@ svg.barchart {
   background-color: #ffffff;
 }
 
-
-.hidden {
-  display: none;
-}
-
 div.tooltip {
   color: #222; 
   background: #ffffff; 
@@ -48,6 +46,17 @@ div.tooltip {
   opacity: 0.9; 
   position: absolute;
 }
+
+#legend {
+  font-size: 0.9em;
+  letter-spacing: 0.1;
+}
+
+
+.hidden {
+  display: none;
+}
+
 
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .navbarbg {

@@ -1,29 +1,108 @@
-const margin = {top: 10, right: 10, bottom: 10, left: 10};
-const width = 960 - margin.left - margin.right;
-const height = 500 - margin.top - margin.bottom;
+
+// Set width & height of the plot
+const marginMap = {top: 10, right: 10, bottom: 10, left: 10};
+const widthMap = 960 - marginMap.left - marginMap.right;
+const heightMap = 520 - marginMap.top - marginMap.bottom;
+
+// Start by creating the svg area
+const svg_map = d3.select("#my_worldmap")
+            .append("g")
+            .attr("width", widthMap)
+            .attr("heigt", heightMap)
+            .attr("transform", "translate(" + marginMap.left + "," + marginMap.top + ")")
+            .attr("viewBox", [0, 0, 200, 200]);
+
+// Map and projeciton
+const data = new Map();
+
 const projection = d3.geoNaturalEarth2()
     .scale([1300 /(2*Math.PI)])
     .center([0,15])
-    .rotate([-9,0])
-    .translate([width / 2, height / 2]);
-// Map and projection.
+    .rotate([-15,-9])
+    .translate([widthMap / 2, heightMap / 2]);
 const path = d3.geoPath()
     .projection(projection);
 
-// Start by creating the svg area
-const svg = d3.select("#my_worldmap")
-            .append("g")
-            .attr("width", width)
-            .attr("heigt", height)
+// Define color scale
+const colorScale = d3.scaleThreshold()
+        .domain([1, 100, 1000, 5000, 10000])
+        .range(d3.schemeOranges[5]);
 
-   //create a tooltip
+// Zoom funciton für weltkarte
+let zoom = d3.zoom()
+    .scaleExtent([1, 3])
+    .on('zoom', handleZoom);
+
+function handleZoom(event) {
+    d3.select('svg#my_worldmap g')
+        .attr('transform', event.transform);
+}
+
+function initZoom() {
+    d3.select('svg#my_worldmap')
+        .call(zoom);
+}
+
+function reset() {
+    d3.select('svg#my_worldmap')
+        .transition()
+        .call(zoom.scaleTo, 1)
+        .transition()
+        .call(zoom.translateTo, 390, 240);
+}
+
+//START LEGEND
+const x_MapLeg = d3.scaleLinear()
+    .domain([0, 1])
+    .rangeRound([600, 860]);
+
+const legend = svg_map.append("g")
+    .attr("id", "legend");
+
+const legend_entry = legend.selectAll("g.legend")
+    .data(colorScale.range().map(function (d) {
+        d = colorScale.invertExtent(d);
+            if (d[0] == NaN) d[0] = x_MapLeg.domain()[0];
+            if (d[1] == null) d[1] = x_MapLeg.domain()[1];
+            return d;
+        }))
+    .enter().append("g")
+    .attr("class", "legend_entry");
+
+const ls_w = 20;
+const ls_h = 20;
+
+legend_entry.append("rect")
+    .attr("x", 0)
+    .attr("y", function (d, i) {
+        return heightMap - (i * ls_h) - 2 * ls_h - 45;
+    })
+    .attr("width", ls_w)
+    .attr("height", ls_h)
+    .style("fill", function (d, i) {
+        return i === 0 ? "#feedde" : colorScale(d[0]);
+    })
+    .style("opacity", 0.8);
+
+legend_entry.append("text")
+    .attr("x", 30)
+    .attr("y", function (d, i) {
+        return heightMap - (i * ls_h) - ls_h - 51;
+    })
+    .text(function (d, i) {
+        if (i === 0) return "Keine Daten vorhanden";
+        if (d[1] < d[0]) return d[0];
+        return d[0] + " - " + d[1];
+    });
+
+
+legend.append("text").attr("x", 0).attr("y", 320).text("Anzahl Routen im Land");
+
+
+// Create a tooltip
 const tooltip = d3.select("div.tooltip");
 
-// definiert die Karte
-const data = new Map(); //dies generiert ein Map-Objekt von D3. Hier können nun mit data.set("key1","value1") neue key-values-Paare ergänzt werden
-const colorScale = d3.scaleThreshold()
-        .domain([1, 100, 1000, 10000])
-        .range(d3.schemeOranges[5]);
+initZoom();
 
 // Load external data and boot
 Promise.all([
@@ -78,24 +157,24 @@ Promise.all([
                     .html(d.properties.name + ": "+ formattedTotal + " Routen")                    
         }
 
-        svg.append("g")  
-            .selectAll("path") 
-            .data(topo.features)
-            .enter()
-            .append("path")
-            //draw each country
-            .attr("d", d3.geoPath()
-                .projection(projection)
-                )
-            //set the color of each country
-            .attr("fill", function (d) {
-                d.total = data.get(d.id) || 0;
-                return colorScale(d.total);
-            })
-            .style("stroke", "transparent")
-            .attr("class", function(d) {return "Country"})
-            .style("opacity", .8)  //Deckkraft
-            .on("mouseover", mouseOver)
-            .on("mousemove", mouseMove)
-            .on("mouseleave",mouseLeave)
+    svg_map.append("g")  
+        .selectAll("path") 
+        .data(topo.features)
+        .enter()
+        .append("path")
+        //draw each country
+        .attr("d", d3.geoPath()
+            .projection(projection)
+            )
+        //set the color of each country
+        .attr("fill", function (d) {
+            d.total = data.get(d.id) || 0;
+            return colorScale(d.total);
+        })
+        .style("stroke", "grey")
+        .attr("class", function(d) {return "Country"})
+        .style("opacity", .8)  //Deckkraft
+        .on("mouseover", mouseOver)
+        .on("mousemove", mouseMove)
+        .on("mouseleave",mouseLeave)
 })

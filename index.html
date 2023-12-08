@@ -67,17 +67,27 @@
         <h5 class="w4-center">Konzept / Prototyp</h5>
         <p>Bevor wir mit der Entwicklung der Webseite gestartet sind, haben wir uns Gedanken gemacht, welche Daten
             wir verwenden, um die Fragestellungen visuell beantworten zu können. Anschliessen haben wir
-            einige Skizzen von Hand gezeichnet und uns in der Gruppe ausgetauscht. Während der gruppeninternen Besprechung 
-            haben wir mit <a href="https://powerbi.microsoft.com/de-ch/" target="_blank" title="BI-Software from Microsoft">Power-BI</a> von Microsoft ein Dashboard erstellt. Damit konnten wir bezogen auf unsere vorhandenen Daten sehen, 
-            wie aussagekräftig die gewählten Visualisierungen sind.<br/>
-            Für das Nachvollziehn unserer Überlegungen verweisen wir auf den Abschnitt "Design-Entscheidungen"<br/>
+            einige Skizzen von Hand gezeichnet (siehe Skizze 1) und uns in der Gruppe ausgetauscht.
+
+        <h5 class="w4-center">Skizze 1</h5>
+        <div class="container">
+            <img src="img/Skizze_1_Dashboard.png" alt="1. Skizze Dashboard" width="100%">
+        </div>
+            Anschliessend machten wir uns an die Erstellung in D3. Bei der Erstellung des Scatter-Plots hat sich jedoch gezeigt, dass zu viele einzelne Datensätze vorhanden 
+            sind und die Datenpunkte übereinander liegen. Aus diesem Grund wollten wir uns für den weiteren Projektverlauf eine Skizze erstellen, welche auf unseren Daten basiert. 
+            Um dies einfach und effizient erstellen zu können, haben wir im <a href="https://powerbi.microsoft.com/de-ch/" target="_blank" title="BI-Software from Microsoft">Power-BI</a> 
+            von Microsoft ein neues Dashboard erstellt. Nun konnten wir, bezogen auf unsere vorhandenen Daten, sehen, wie aussagekräftig die gewählten Visualisierungen sind.<br/>
         </p>
-        <h5 class="w4-center">Skizze</h5>
+        <h5 class="w4-center">Skizze 2</h5>
         <p>Die nachfolgende Skizze zeigt unser im Power-BI erarbeitetes Dashboard mit den Kletter-Daten.</p><br/>
         <div class="container">
             <img src="img/Skizze_Dashboard_PowerBI.png" alt="Skizze Dashboard" width="100%">
         </div>
-        <br/>
+        <p>Es hat sich bei der erneuten Projektbesprechung ergeben, dass wir die Tabellen zu den Kletterpersonen nicht verwenden und auf die Berücksichtigung des BMI verzichten.
+            Grund hierfür war, dass wir im Power-BI festgestellt haben, dass mit den Kletterrouten ein sehr vielfältiges Datenset vorhanden ist und unsere Fragestellungen 
+            damit auch beantworten können. Mit der Weltkarte können wir das "Wo?" beantworten und mit der Treemap bzw. dem Barchart können wir zusätzliche Informationen 
+            pro Land erhalten.
+        </p><br/>
         <br/>
 
         <h5 class="w4-center">Erkenntnisse</h5>
@@ -158,6 +168,7 @@
             <br/>
             <!--Visualisierung der Weltkarte mittels weltkarte.js-->
             <svg class="worldmap" id="my_worldmap" width="800" height="500"></svg>
+            <button onclick="reset()">Reset Weltkarte</button>
             <div class="tooltip"></div>
         </p>
     </div>
@@ -296,6 +307,7 @@
             <li><a href="https://www.d3-graph-gallery.com/graph/choropleth_hover_effect.html" target="_blank">Choropleth map with hover effect</a></li>
             <li><a href="https://d3-graph-gallery.com/interactivity.html" target="_blank">Interaktion wie Tooltip, Brushing, Buttons, Zooming</a></li>
             <li><a href="https://d3-graph-gallery.com/graph/barplot_button_data_csv.html" target="_blank">Barchart</a></li>
+            <li><a href="https://gist.github.com/d3noob/7b7e98331f440139dff50f4a58044677" target="_blank">Zoom with v7 in D3</a></li>
             <li><a href="" target="_blank">    </a></li>
 
             <li><a href="https://www.oreilly.com/library/view/interactive-data-visualization/9781491921296/" target="_blank">Interactive Data Visualization for the Web by Scott Murray</a></li>
