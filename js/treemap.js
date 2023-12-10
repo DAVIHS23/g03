@@ -19,6 +19,7 @@ function renameSmallCountries(data) {
     data = data.map(function(d) {
         if (smallCountries.includes(d.country)) {
             d.country = "OTH";
+            d.country_name = d.continent + " Others"
         } 
         return d; })
     return data
@@ -28,8 +29,8 @@ function renameSmallCountries(data) {
 const file2 = "data/df_routes_grouped.csv";
 d3.csv(file2).then(function (data) {
     data=renameSmallCountries(data);
-    data = d3.flatRollup(data, D => d3.sum(D, d=>d.routes_count), d => d.continent, d => d.country)
-    .map(a => ({"continent": a[0], "country": a[1], "routes_count": a[2]}));
+    data = d3.flatRollup(data, D => d3.sum(D, d=>d.routes_count), d => d.continent, d => d.country, d => d.country_name)
+    .map(a => ({"continent": a[0], "country": a[1], "routes_count": a[3], "country_name": a[2]}));
     console.log("Treemap: data = ");
     console.log(data);
 
@@ -67,17 +68,19 @@ d3.csv(file2).then(function (data) {
         let country = i.data.country;
         if (country===selectedCountry) {
             selectedCountry = undefined;
+            selectedCountryName = undefined;
             selectedContinent = undefined;
         } else {
             selectedCountry = country;
+            selectedCountryName = i.data.country_name;
             selectedContinent = i.data.continent;
         }
-        console.log("selected country: " + selectedContinent + "/" + selectedCountry);
+        console.log("selected country: " + selectedContinent + "/" + selectedCountry + ", " + selectedCountryName);
         d3.selectAll("#my_treemap rect").style("fill-opacity", "0.8");
         if (selectedCountry) {
             d3.select(this).style("fill-opacity", 1);
         }
-        updateBarchart(selectedCountry, selectedContinent);
+        updateBarchart(selectedCountry, selectedContinent, selectedCountryName);
     });
 
     // add the text/label ot the rectangels

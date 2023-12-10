@@ -19,7 +19,7 @@ svgBar.append("text")
     .style("font-weight", "bold")
 
 // A function that create / update the plot for a given variable:
-function updateBarchart(selCountry, selContinent) {
+function updateBarchart(selCountry, selContinent, selCountryName) {
     // Load and aggregate data
     d3.csv("data/df_routes_grouped.csv").then(function(csvData) {
     var allData = renameSmallCountries(csvData);
@@ -72,8 +72,10 @@ function updateBarchart(selCountry, selContinent) {
     // Titel
     title = "Welt";
     if (selCountry) {
-        title = selCountry;
+        title = selCountryName;
     }
     svgBar.select("#barTitle")
         .text(title);
 };
+
+updateBarchart();
