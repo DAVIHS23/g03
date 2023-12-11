@@ -54,12 +54,12 @@
             Neben der körperlichen Vorbereitung erfordert Klettern auch mentale Stärke, um Ängste zu überwinden. 
             Zusammenfassend lässt sich sagen, dass Klettern eine Sportart ist, die körperliche Fitness, Konzentration 
             und Geschicklichkeit vereint und es ermöglicht, die eigenen Grenzen auszutesten und die Natur in vollen Zügen zu genießen.<br/>
-            Bei der jährlichen Ferienplanung suchen wir (die Autoren) nach passenden Klettergebieten weltweit, welche unseren Kletterfähigkeiten entsprechen. 
-            Bei der Suche sind wir auf öffentlich zugängliche Kletterplattformen angewiesen. Mit diesem DAVI-Projekt erschaffen wir uns einen visuellen Überblick
+            Bei der jährlichen Ferienplanung suchen die Autoren nach passenden Klettergebieten weltweit, welche deren Kletterfähigkeiten entsprechen. 
+            Bei der Suche sind sie auf öffentlich zugängliche Kletterplattformen angewiesen. Mit diesem DAVI-Projekt erschaffen sie sich einen visuellen Überblick
             über die öffentlich zugänglichen Routen.
         </p>
         <h5 class="w4-center">Problemstellung / Unser Ziel </h5>
-        <p> Im Rahmen unserer Analyse wollen wir die folgenden Fragen beantworten: <br />
+        <p> Im Rahmen der DAVi-Analyse sollen die folgenden Fragen beantwortet: <br />
             - Wo auf der Welt sind die meisten Kletterrouten veröffentlicht? <br/>
             - In welchem Land hat es für unser Können am meisten Kletterrouten? <br />
             <br/>
@@ -73,7 +73,7 @@
         <div class="container">
             <img src="img/Skizze_1_Dashboard.png" alt="1. Skizze Dashboard" width="100%">
         </div>
-            Anschliessend machten wir uns an die Erstellung in D3. Bei der Erstellung des Scatter-Plots hat sich jedoch gezeigt, dass zu viele einzelne Datensätze vorhanden 
+            Anschliessend machten wir uns an die Erstellung in D3. Bei der Erstellung des Scatter-Plots (Skizze links) hat sich jedoch gezeigt, dass zu viele einzelne Datensätze vorhanden 
             sind und die Datenpunkte übereinander liegen. Aus diesem Grund wollten wir uns für den weiteren Projektverlauf eine Skizze erstellen, welche auf unseren Daten basiert. 
             Um dies einfach und effizient erstellen zu können, haben wir im <a href="https://powerbi.microsoft.com/de-ch/" target="_blank" title="BI-Software from Microsoft">Power-BI</a> 
             von Microsoft ein neues Dashboard erstellt. Nun konnten wir, bezogen auf unsere vorhandenen Daten, sehen, wie aussagekräftig die gewählten Visualisierungen sind.<br/>
@@ -83,10 +83,9 @@
         <div class="container">
             <img src="img/Skizze_Dashboard_PowerBI.png" alt="Skizze Dashboard" width="100%">
         </div>
-        <p>Es hat sich bei der erneuten Projektbesprechung ergeben, dass wir die Tabellen zu den Kletterpersonen nicht verwenden und auf die Berücksichtigung des BMI verzichten.
-            Grund hierfür war, dass wir im Power-BI festgestellt haben, dass mit den Kletterrouten ein sehr vielfältiges Datenset vorhanden ist und unsere Fragestellungen 
-            damit auch beantworten können. Mit der Weltkarte können wir das "Wo?" beantworten und mit der Treemap bzw. dem Barchart können wir zusätzliche Informationen 
-            pro Land erhalten.
+        <p>Dadurch konnten wir definieren, dass wir auf die Berechnung eines BMI (wie noch bei Skizze 1 angenommeN) und deren Einfluss auf die Schwierigkeitskgrade verzichten.
+            Grund hierfür war auch, dass wir genügend interessante Visualisierungen mit der Weltkarte, der Treemap und dem Barchart erarbeitne können. In diesem Zug ergab sich auch, 
+            dass wir die Tabellen mit den Daten zu den Kletterpersonen nicht benötigen.
         </p><br/>
         <br/>
 
@@ -97,8 +96,8 @@
         Dies ist einerseits visuell auf der Weltkarte ersichtlich, da die Färbung der Länder zeigt, dass Kletterrouten 
         in diesem Land vorhanden sind. Andererseite zeigt auch die Treemap, worin die Grösse der einzelnen Felder die Anzahl Kletterrouten 
         berücksichtigt, dass die Länder mit den grössten Feldern vorwiegend in Europa und Amerika liegen.<br/>
-        <h6>Routen:</h6>Da es sehr viele Routen gibt, wurde die Visualisierung auf Stufe Crags beschränkt. Die Anzahl der 
-        Routen wird in der Grösse der Treemap-Felder visualisiert.
+        <h6>Routen:</h6>Da es sehr viele Routen und Klettergebiete gibt, wurde die Visualisierung auf Stufe Land beschränkt. Die Anzahl der 
+        Routen pro Land wird in der Grösse der Treemap-Felder visualisiert.
         <br/>
         <h6>Schwierigkeitsgrad:</h6>Die im Datensatz verwendete Zahl für die Bezeichnung des Schwierigkeitsgrad (Wert zwischen 29 - 77) 
         ist für Kletterer nicht verständlich und somit für das Zielpublikum nicht sinnvoll. Die Französische Skala (Wert zwischen  5a - 9c) 
@@ -120,27 +119,29 @@
 <!-- SECTION DATA   -->
     <div class="w3-content w3-container w3-padding-64" id="data">
         <h3 class="w3-center">Daten</h3>
+
+        <p>Es gibt fast keine Datensets zum Thema Klettern. Dies hat uns dazu bewogen, das Dataset von Kaggel (siehe Quelle unten) zu verwenden, obwohl die
+        verlinkte, ursprüngliche Quelle (von Autor David Cohen) nicht mehr vorhanden ist. In den Metadaten wurde darauf hingewiesen, dass die Daten mittels
+        einem Scraper von der Website <a href="https://www.8a.nu" target="_blank" title="8a.nu: Global Climbing News">www.8a.nu</a> bezogen wurde. 
+        Anschliessend hat der Autor die Daten transformiert.<br/>
+        Einige Stichproben von uns bei der Routen-Tabelle (z.Bsp. Region "Frankenjura" in Deutschland mit dem Gebiet "Weissenstein") zeigen, dass die Daten im 
+        verwendeten Kaggle-Dataset mit der Website www.8a.nu korrespondieren und der Abgleich mit der Literatur 
+        (<a href="https://pizbube.ch/shop/kletterfuehrer-frankenjura-band-1-inkl-app-2/" target="_blank" title="Kletterführer Frankenjura">Kletterführer Frankenjura</a>) 
+        ebenfalls erfolgreich war. Somit erachten wir das Dataset als vertrauenswürdig.</p>
+
         <h5 class="w4-center">Datenquellen und Attribute</h5>
-        <p>Das "Climb Dataset" von Jordi Zaragoza enthält drei Datensätze, welche als CSV-Files zum Download zur Verfügung stehen. Hier enthalten sind Daten zu den
+        <p>Das "Climb Dataset" von Jordi Zaragoza enthält drei Datentabellen, welche als CSV-Files zum Download zur Verfügung stehen. Hier enthalten sind Daten zu den
             Kletterpersonen, zu Routen und eine Schwierigkeitsgrad-Skala. In diesem Dataset werden die Länder mit dem 3-stelligen ISO-Code angegeben. 
             Damit wir die Namen der Länder in den Visualisierungen ausschreiben können, haben wir das zweite Dataset "Countries Mapping - ISO"
             ebenfalls von Kaggle verwendet.<br/>
-            Die Quellenangaben zu Kaggel für die zwei Datensätze sind:<br/>
+            Die Quellenangaben zu Kaggel für die zwei Datenquellen sind:<br/>
         <li><a href="https://www.kaggle.com/datasets/jordizar/climb-dataset/data" target="_blank" title="Open Kaggle">Open Source Datensatz "Climb Dataset" von Kaggle</a></li>
         <ul>climber-df: CSV-File mit 10'927 Tuples und 15 Attributen  --> nicht verwendet</ul>
         <ul>routes_rated: CSV-File mit 55'858 Tuples und 9 Attributen</ul>
         <ul>grades_conversion_table: CSV-File mit 85 Tuples und 2 Attributen</ul>
         <li><a href="https://www.kaggle.com/datasets/andradaolteanu/country-mapping-iso-continent-region" target="_blank" title="Open Kaggle">Open Source Datensatz "Counry Mapping - ISO, Continent, Region" von Kaggle</a></li>
         <ul>continents2.csv: CSV-File mit 249 Tuples und 11 Attributen</ul>
-        <br/>
-        Es gibt fast keine Datensets zum Thema Klettern. Dies hat uns dazu bewogen, das Dataset von Kaggel (siehe Quelle oben) zu verwenden, obwohl die
-        verlinkte, ursprüngliche Quelle (von Autor David Cohen) nicht mehr vorhanden ist. In den Metadaten wurde darauf hingewiesen, dass die Daten mittels
-        einem Scraper von der Website <a href="https://www.8a.nu" target="_blank" title="8a.nu: Global Climbing News">www.8a.nu</a> bezogen wurde. Anschliessend hat der Autor die Daten transformiert.<br/>
-        Einige Stichproben von uns bei den Routen (z.Bsp. Region "Frankenjura" in Deutschland mit dem Gebiet "Weissenstein") zeigen, dass die Daten im 
-        verwendeten Kaggle-Dataset mit der Website www.8a.nu korrespondieren und der Abgleich mit der Literatur 
-        (<a href="https://pizbube.ch/shop/kletterfuehrer-frankenjura-band-1-inkl-app-2/" target="_blank" title="Kletterführer Frankenjura">Kletterführer Frankenjura</a>) 
-        ebenfalls erfolgreich war. Somit erachten wir das Dataset als vertrauenswürdig.
-        
+        <br/>        
     </p>
     <br/>
         <h5 class="w4-center">Datenbereinigung</h5>
@@ -163,13 +164,20 @@
 <div class="w3-container">
     <div class="w3-row w3-content ">
         <h3 class="w3-center">Visualisierung</h3>
-        <h5 class="w4-center">Dashboard der Climbing-Daten</h5>
-        <p>(Optimiert auf Full-Screen Windows)
+        <h5 class="w4-center">Dashboard der Climbing-Daten (optimiert auf Full-Screen Windows)</h5>
+        <p>Hoverover mit der Maus über ein Land, um den Namen des Landes und die genaue Anzahl vorhandener Kletterrouten zu erfahren.
+            Durch Zooming können auch kleinere Länder ausgewählt werden (Nutze den Reset-Button unter der Weltkarte, um wieder die ganze Weltkarte zu sehen).
             <br/>
             <!--Visualisierung der Weltkarte mittels weltkarte.js-->
             <svg class="worldmap" id="my_worldmap" width="800" height="500"></svg>
             <button onclick="reset()">Reset Weltkarte</button>
             <div class="tooltip"></div>
+            <br/>
+            Nachfolgend werden die Anzahl vorhandener Routen pro Land in den Kontinenten angezeigt. Aktiviere ein Land in der Treemap, damit
+            im Barchart die Verteilung der Kletterrouten pro Schwierigkeitsgrad angezeigt wird. Mit erneuten Klick auf das ausgewählte Land, 
+            wechselt die Barchart-Darstellung wieder zur Anzeige der ganzen Welt (bzw. alle vorhandenen Kletterrouten im verwendeten Datenset).
+            <br/>
+            Es ist zu beachten, dass Länder mit wenig Routen in "OTH" (pro Kontinent) zusammengefasst wurden.
         </p>
     </div>
     <div class="w3-row">
@@ -189,37 +197,37 @@
         <h3 class="w3-center">Design</h3>
         <h5 class="w4-center">Visuelle Design-Entscheidungen</h5>
         <h6>Grundlagen Visual Design</h6>
-        <p>Der Schwerpunkt der Visualisierung liegt auf einer interaktiven Weltkarte. Ziel ist es, dem Nutzer/der Nutzerin ein intuitives Dashboard bereitzustellen,
+        <p>Der Schwerpunkt der Visualisierung liegt auf der Weltkarte. Ziel ist es, dem Nutzer/der Nutzerin ein intuitives Dashboard bereitzustellen,
             auf dem alle relevanten Informationen schnell gefunden werden können. Die Nutzenden, in diesem Fall Kletterbegeisterte, möchten herausfinden, wo 
             sie ihre Ferien verbringen möchten.<br/>
             Um die Frage "WO" zu beantworten, haben wir uns für eine Weltkarte entschieden, da diese für diesen Use Case besonders geeignet ist. Mithilfe 
-            der Visualisierung können die Nutzenden schnell erkennen, welche Länder in Frage kommen. Die Frage "WAS" wurde durch die Implementierung von
-            Filtern gelöst. Durch diese Filter können die Nutzenden die gewünschte Schwierigkeitsstufe auswählen. Auf der Heatmap wird anschliessend deutlich,
-            wo die Nutzenden für ihre Kletter-Fähigkeiten die meisten Kletterrouten finden können.</p>
+            der Visualisierung können die Nutzenden schnell erkennen, welche Länder in Frage kommen. Die Frage "WAS" wurde durch die Implementierung der Treemap und
+            des Barcharts beantwortet. Im Barchart werden alle Routen gemäss deren Schwierigkeitsstufe angezeigt. Durch Anklicken eines Landes in der Treemap wird 
+            ein Filter gesetzt, und nun werden die Schwierigkeitsstufen des entsprechend selektierten Landes angezeigt.</p>
         <h6  class="w4-center">Weltkarte</h6>
-        <p>Eine Weltkarte bietet eine übersichtliche Möglichkeit, die geografische Verteilung der Kletter-Routen-Gebiete zu zeigen. 
-            Durch die farbliche Darstellung der Länder können wir auf einen Blick erkennen, in welchen Regionen 
-            Kletterrouten im Dataset verfügbar sind. Dies erleichtert die Auswahl eines Kontinets bzw. Landes für Kletter-Ferien.<br/>
+        <p>Eine Weltkarte bietet eine übersichtliche Möglichkeit, die geografische Verteilung der Kletterrouten zu zeigen. 
+            Durch die farbliche Darstellung der Weltkarte können wir auf einen Blick erkennen, in welchen Ländern Kletterrouten im Dataset verfügbar sind.
+            Zusätzlich kann die Person auch mit der Maus über das Land in der Weltkarte fahren und sieht dann gleichzeitig den Namen des Landes und die Anzahl vorhandener Routen.
+            Dies erleichtert die Auswahl eines Kontinets bzw. eines Landes für Kletterferien.<br/>
         </p>
-        <h6 class="w4-center">Heatmap</h6>
-        <p>Die Verwendung einer Heatmap ermöglicht es uns, die Dichte der Kletterrouten auf Ländern oder Crags visuell herauszuarbeiten. 
+        <h6 class="w4-center">Treemap</h6>
+        <p>Die Verwendung einer Treemap ermöglicht es uns, die Dichte der Kletterrouten auf Stufe Ländern visuell anzuzeigen. 
             Diese Darstellung hilft, Gebiete mit einer höheren Konzentration von Routen leichter zu erkennen. Es ermöglicht auch die Identifizierung
-            von Gebieten mit einem breiten Angebot an Kletterrouten im Vergleich zu weniger frequentierten Orten.<br/>
+            von Gebieten mit einem breiten Angebot an Kletterrouten im Vergleich zu weniger ausgestatteten Ländern.<br/>
         </p>
-        <h6 class="w4-center">Balkendiagramm</h6>
-        <p>Ein Balkendiagramm bietet eine effektive Möglichkeit, die Schwierigkeitsgrade der Kletterrouten in der ausgewählten Region zu sehen. 
-            Durch die Anordnung der Balken nach Schwierigkeitsgraden können Benutzer leicht ablesen, welche Grade in der Region am häufigsten vorkommen. 
-            Dies unterstützt die Kletterer bei der Auswahl von Routen, die ihrem Fähigkeitsniveau entsprechen.<br/>
+        <h6 class="w4-center">Barchart</h6>
+        <p>Ein Balkendiagramm bietet eine effektive Möglichkeit, die Schwierigkeitsgrade der Kletterrouten im ausgewählten Land zu sehen. 
+            Durch die Anordnung der Balken nach Schwierigkeitsgraden können Benutzer leicht ablesen, welche Grade gemäss Selektion am Häufigsten vorkommen. 
+            Dies unterstützt die Kletterer bei der Auswahl der Feriendestination, die ihrem Fähigkeitsniveau entsprechen.<br/>
         </p> <br/>
         <h5 class="w4-center">Prinzipien von Analytischem Design (nach Tufte)</h5>
             <h6 class="w4-center">Prinzip 1: Vergleichbarkeit</h6>
-        <p>Mit Hilfe der interaktiven Weltkarte können Länder miteinander verglichen werden. Eine weitere Vergleichsmöglichkeit bietet die 
-            Brushing & Linking-Technik. Sobald eine Person mit der Maus auf ein Land klickt, wird in der Treemap die verschiedenen Klettergebiete angezeigt. Anhand dieser
-            Darstellung erleichtert es den Vergleich der Kletter-Regionen bezogen auf die Anzahl Kletterrouten. Zusätzlich kann die Person auch mit der Maus über 
-            das Land in der Weltkarte oder das Klettergebiet in der Treemap fahren und sieht dann gleichzeitig die Anzahl Routen.
+        <p>Mit Hilfe der Weltkarte können Länder miteinander verglichen werden (im geografischen Kontext). Eine weitere Vergleichsmöglichkeit bietet die 
+            Linking-Technik. Diese wurde zwischen der Treemap und dem Barchart umgesetzt. Sobald eine Person in der Treemap ein Land auswählt, werden im Balkendiagramm die 
+            Anzahl Kletterrouten pro Schwierigkeitsgrad angezeigt. 
         </p>
             <h6 class="w4-center">Prinzip 2: Kausalität</h6>
-        <p>Die Treemap erklärt, durch die Verwendung von variablen Massstäben, auf den ersten Blick, welche Klettergebiete über die meisten
+        <p>Die Treemap erklärt, durch die Verwendung von variablen Massstäben, auf den ersten Blick, welche Kontinente und auch welche Länder pro Kontinent über die meisten
             Kletterrouten verfügt.
         </p>
             <h6 class="w4-center">Prinzip 3: Mehr-Variablen Analyse</h6>
@@ -227,40 +235,41 @@
             Land, zu einem definierten Schwierigkeitsgrad und die Anzahl Routen zu sehen.
         </p>
             <h6 class="w4-center">Prinzip 4: Integration der Evidence</h6>
-        <p>Durch unterschiedliche Farbgebung (je mehr Kletterrouten, desto intensiver die Farbe) und die Beschriftung von Diagrammen.
+        <p>Durch unterschiedliche Farbgebung (je mehr Kletterrouten, desto intensiver die Farbe) und durch die Beschriftung der Diagramme, wird die
+            Evidence sichtbar.
         </p>
             <h6 class="w4-center">Prinzip 5: Dokumentation</h6>
-        <p>Wird in der Visualisierung mit dem Mauszeiger über ein Land gefahren, erscheint ein Popup-Fenster. In diesem Popup-Fenster ist die Anzahl
-            der Klettergebiete sowie die Anzahl Kletterrouten für dieses Land sichtbar.
+        <p>Wird in der Visualisierung mit dem Mauszeiger über ein Land gefahren, erscheint ein Popup-Fenster. In diesem Popup-Fenster ist das Land sowie die Anzahl
+            der Kletterrouten für dieses Land sichtbar. Die "versteckten" Funktionen wurden als Text in der Webpage erläutert.
         </p>
             <h6 class="w4-center">Prinzip 6: Inhalt ist das Wichtigste</h6>
-        <p>Da die Weltkarte das Herzstück des Projekts ist, wurde sie auf der linken Seite der Webseite platziert, da dieser Bereich von den Benutzern immer 
-            zuerst betrachtet wird.
+        <p>Da die Weltkarte das Eintrittstor zu den Daten ist, wurde diese zuerst platziert. So kann sich der Benutzer zuerst einen Überblick verschaffen.
+            Mit dem Mouse-Hover-Over werden die Informationen angezeigt, die der User aus unserer Sicht zusätzlich wünscht.
         </p>
         <h5 class="w4-center">Daten-Tinten-Verhältnis (nach Tufte)</h5>
         <p>Das Buch "The Visual Display of Quantitative Information" von Edward Tufte hebt das Data-Ink-Ratio als ein Schlüsselkonzept für eine effektive
-            Datenvisualisierung hervor. Das Data-Ink-Ratio bezieht sich auf den Anteil der Tinte (grafische Elemente) in einer Visualisierung, der tatsächlich 
+            Datenvisualisierung hervor. Der Data-Ink-Ratio bezieht sich auf den Anteil der Tinte (grafische Elemente) in einer Visualisierung, der tatsächlich 
             zur Darstellung von Informationen verwendet wird. Tufte empfiehlt, unnötige, dekorative oder redundante Elemente zu minimieren, um das 
             Data-Ink-Ratio zu maximieren. Ein höherer Anteil an Tinte, der direkt die Daten repräsentiert, führt zu klareren und effizienteren Grafiken. 
             Dieser Ansatz trägt dazu bei, dass visuelle Darstellungen genauer und informativer werden.<br/>
-            Um dieses "Data-Ink-Ratio" so hoch wie möglich zu halten, wurde im Rahmen des Projektes angestrebt, nur die relevanten Informationen wie 
-            Weltkarte, Treemap und Balken farbig zu gestalten.
+            Um dieses "Data-Ink-Ratio" so hoch wie möglich zu halten, wurde im Rahmen des Projektes folgendes beachtet:<br/>
+            <ul><li>Weltkarte: eine Farbskale von 5 Stufen ; orange-Farbe in Anlehnung an die Farbe des Bodens ; Blau für das Wasser (damit die Grenzen der Karte ersichtlich ist; vor allem wenn gezoomt wurde)</li>
+            <li>Treemap: pro Kontinent eine Farbe</li>
+            <li>Balkendiagramm: wenig Hilfszeilen</li></ul>
+
         </p>
         <h5 class="w4-center">Menschliche Wahrnehmung</h5>
         <p>Da Klettern das zentrale Thema unseres Projekts ist, wurden die Bilder auf der Homepage passend gewählt. Durch das einprägendes Bild mit der Treppe
             und dem Kind, welches in einer anderen Bedeutung zu "klettern" steht, wollen wir die Neugier für die Page anregen. Das Bild im Bereich "Daten" zeigt
-            das Zielpublikum als ambitionierter Kletterer. 
-
-            Auch die Farben wurden so gewählt, dass es für den User auf den ersten Blick als einansprechendes Design
-            wahrgenommen wird.
+            das Zielpublikum als ambitionierter Kletterer. Auch die Farben wurden so gewählt, dass es für den User (Kletterer sind meist mit der Natur verbundene Personen) 
+            auf den ersten Blick als ein ansprechendes Design wahrgenommen wird.
         <h5 class="w4-center">Schritte in der Daten-Visualisierung</h5>
         <p>Laut Jeffrey Heer und Ben Shneiderman lassen sich Datenvisualisierungen in drei Kategorien unterteilen:<br/> 
             <ul><li>Spezifikation von Daten und Ansichten (visualisieren, filtern, sortieren, ableiten) - Um die Länder und Kontinente
-            einheitlich zu färben, mussten die Länder auf ISO3 und ISO3 auf Kontinent abgebildet werden.</li><br/>
+            einheitlich zu färben, mussten den ISO3-Länder den entsprechenden Kontinent hinzugefügt werden.</li><br/>
             <li>Manipulation von Ansichten (auswählen, navigieren, koordinieren, organisieren) - Wenn Sie auf das gewünschte Land zeigen, erscheint
-            eine entsprechende Legende, die sich mit dem Mauszeiger bewegt. Mit dem Schieberegler kann die mindestens Anzahl Kleterrouten eingestellt
-            werden. Auf diese Weise kann die Weltkarte bei Bedarf übersichtlicher dargestellt werden. Ausserdem werden mit der Treemap und 
-            dem Balkendiagramm mehrere Diagramme angezeigt, um einen möglichst klaren Überblick zu erhalten.</li><br/>
+            eine entsprechende Legende, die sich mit dem Mauszeiger bewegt. Durch das Zoomen in der Weltkarte können auch kleinere Länder angezeigt werden. 
+            Ausserdem werden mit der Treemap und dem Balkendiagramm mehrere Diagramme angezeigt, um einen möglichst klaren Überblick zu erhalten.</li><br/>
             <li>Prozess und Herkunft (aufzeichnen, kommentieren, weierleiten, anleiten) - Die visuelle interpretation beschränkt sich nicht auf die
             Erstellung und Bearbeitung von Visualisierungen, sondern umfasst eine Reihe von iterativen Datenexplorationen und Interpretationen.</li><br/>
             </ul> 
@@ -274,10 +283,11 @@
             Shneidermans Information Seeking Mantra wie folgt umgesetzt:
             <ul>
                 <li><strong>Überblick</strong></li>
-                Verwenden Sie die Weltkarte, um sich einen ersten Überblick zu verschaffen. Das ist das erste, was man sieht. Wenn man mit der Maus darüber fährt, wird die Anzahl Routen des Landes angezeigt.
+                Verwenden Sie die Weltkarte, um sich einen ersten Überblick zu verschaffen. Daher wurde die Weltkarte als erste Visualisierung und zentriert platziert. 
+                Wenn mit der Maus über ein Land gefahren wird, wird die Anzahl Routen des Landes sowie dessen Namen angezeigt.
                 <li><strong>Filter</strong></li>
-                Mit einem Schieberegler können Sie den Schwierigkeitsgrad der Kletterrouten auswählen. Die dann vorhandenen Kletterrouten werden anschliessend pro Land angezeigt. Die Treemap zeit ebenfalls die Länder mit den entsprechenden Anzahl Routen.
-                <li><strong>Verbinden</strong></li>
+                Durch die Auswahl eines Landes in der Treemap, werden die Anzahl Routen in der Barchart gefiltert dargestellt.
+                <li><strong>Linking</strong></li>
                 Alle Länder eines Kontinents erhalten die gleiche Farbe, so dass man erkennen kann, welche Länder zusammengehören. Diese Kontinentalfarben werden auf die Treemap übertragen, damit Sie den Überblick behalten (Brush und Link).
             </ul>
         </p>
@@ -286,14 +296,24 @@
 <!-- SECTION FINDINGS -->
 <div class="w3-content w3-container w3-padding-64" id="ref">
     <h3 class="w3-center">Findings</h3>
-    <p>Basierend auf den Visualisierungn haben wir folgende Informationen gewonnen:<br/>
+    <p>Basierend auf den Visualisierungen haben wir folgende Informationen gewonnen:<br/>
     <ul>
-        <li> Es ist ersichtlich, dass in Asien sowie in Nord-/Zentralafrika keine Kletterrouten veröffentlicht sind.</li>
-        <li> Da die Autoren das Kletterniveau 6 haben, stehen ihnen insgesamt xxxx Routen zur Verfügung.</li>
+        <li> Es ist ersichtlich, dass in Asien sowie in Afrika keine oder nur sehr wenige Kletterrouten veröffentlicht sind.</li>
+        <li> Alleine in Spanien sind mehr Kletterrouten veröffentlicht, wie in allen anderen Kontinenten zusammen (das Treemap-Feld ist grösse als die anderen Felder zusammen)</li>
     </ul>
+    Während der Erstellung der Webpage begegneten wir folgenden Herausforderungen:
+    <ul>
+        <li> Da die Graphen-Codes aus C3-Gallery und weiterne Plattformen auf unterschiedlichen D3-Versionen basierten, wurde es 
+            sehr zeitintensiv, die erstellten Visualisierungen an eine einheitliche Version anzupassen. Teilweise wurden Funktionen
+            in Versionen nicht mehr unterstützt, da sie anders in der Library umgesetzt wurden.</li> 
+        <li>Die Umsetzung in D3 ist massiv aufwändiger als die Datenvisualisierung im Power-BI von Microsoft. Dadurch ist aber auch sichtbar geworden,
+        wie viel Programmieraufwand hiner Power-BI steckt.</li>
+        <li>Das Verlinken von zwei Visualisierungen war ebenfalls herausfordernd. Auch da es im html bzw. javascript nicht einfach zum Debuggen ist.</li>
+    </ul>
+    Die Gruppenarbeit hat uns (kurz vor Abschluss des Major) noch einmal in Bezug auf Daten-Bewirtschaftung, Programmierung und Webpaging und natürlich die 
+    effiziente Visualisierung gefordert und hat diese Disziplinen sehr gut zusammengefasst.
 </p>
 </div>
-
 
 <!-- SECTION REFERENCES -->
     <div class="w3-content w3-container w3-padding-64" id="ref">
@@ -303,13 +323,12 @@
         </p>
         <ul>
             <li><a href="https://d3js.org/" target="_blank">D3 Documentation</a></li>
-            <li><a href="https://d3-graph-gallery.com/graph/backgroundmap_changeprojection.html" target="_blank">Map of the World (Choropletz) with colorScale</a></li>
+            <li><a href="https://d3-graph-gallery.com/graph/backgroundmap_changeprojection.html" target="_blank">Map of the World (Choropleth) with colorScale</a></li>
             <li><a href="https://www.d3-graph-gallery.com/graph/choropleth_hover_effect.html" target="_blank">Choropleth map with hover effect</a></li>
             <li><a href="https://d3-graph-gallery.com/interactivity.html" target="_blank">Interaktion wie Tooltip, Brushing, Buttons, Zooming</a></li>
             <li><a href="https://d3-graph-gallery.com/graph/barplot_button_data_csv.html" target="_blank">Barchart</a></li>
+            <li><a href="https://d3-graph-gallery.com/graph/treemap_custom.html" target="_blank">Treemap</a></li>
             <li><a href="https://gist.github.com/d3noob/7b7e98331f440139dff50f4a58044677" target="_blank">Zoom with v7 in D3</a></li>
-            <li><a href="" target="_blank">    </a></li>
-
             <li><a href="https://www.oreilly.com/library/view/interactive-data-visualization/9781491921296/" target="_blank">Interactive Data Visualization for the Web by Scott Murray</a></li>
         </ul>  
     </div>  
