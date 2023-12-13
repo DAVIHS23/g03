@@ -83,8 +83,8 @@
         <div class="container">
             <img src="img/Skizze_Dashboard_PowerBI.png" alt="Skizze Dashboard" width="100%">
         </div>
-        <p>Dadurch konnten wir definieren, dass wir auf die Berechnung eines BMI (wie noch bei Skizze 1 angenommeN) und deren Einfluss auf die Schwierigkeitskgrade verzichten.
-            Grund hierfür war auch, dass wir genügend interessante Visualisierungen mit der Weltkarte, der Treemap und dem Barchart erarbeitne können. In diesem Zug ergab sich auch, 
+        <p>Dadurch konnten wir definieren, dass wir auf die Berechnung eines BMI (wie noch bei Skizze 1 angenommen) und deren Einfluss auf die Schwierigkeitsgrade verzichten.
+            Grund hierfür war auch, dass wir genügend interessante Visualisierungen mit der Weltkarte, der Treemap und dem Barchart erarbeiten können. In diesem Zug ergab sich auch, 
             dass wir die Tabellen mit den Daten zu den Kletterpersonen nicht benötigen.
         </p><br/>
         <br/>
@@ -94,7 +94,7 @@
         <br/>
         <h6>Länder:</h6>Es gibt für die westlichen Länder (Europa, Amerika) mehr veröffentlichte Kletterrouten. 
         Dies ist einerseits visuell auf der Weltkarte ersichtlich, da die Färbung der Länder zeigt, dass Kletterrouten 
-        in diesem Land vorhanden sind. Andererseite zeigt auch die Treemap, worin die Grösse der einzelnen Felder die Anzahl Kletterrouten 
+        in diesem Land vorhanden sind. Andererseits zeigt auch die Treemap, worin die Grösse der einzelnen Felder die Anzahl Kletterrouten 
         berücksichtigt, dass die Länder mit den grössten Feldern vorwiegend in Europa und Amerika liegen.<br/>
         <h6>Routen:</h6>Da es sehr viele Routen und Klettergebiete gibt, wurde die Visualisierung auf Stufe Land beschränkt. Die Anzahl der 
         Routen pro Land wird in der Grösse der Treemap-Felder visualisiert.
@@ -134,7 +134,7 @@
             Kletterpersonen, zu Routen und eine Schwierigkeitsgrad-Skala. In diesem Dataset werden die Länder mit dem 3-stelligen ISO-Code angegeben. 
             Damit wir die Namen der Länder in den Visualisierungen ausschreiben können, haben wir das zweite Dataset "Countries Mapping - ISO"
             ebenfalls von Kaggle verwendet.<br/>
-            Die Quellenangaben zu Kaggel für die zwei Datenquellen sind:<br/>
+            Die Quellenangaben zu Kaggle für die zwei Datenquellen sind:<br/>
         <li><a href="https://www.kaggle.com/datasets/jordizar/climb-dataset/data" target="_blank" title="Open Kaggle">Open Source Datensatz "Climb Dataset" von Kaggle</a></li>
         <ul>climber-df: CSV-File mit 10'927 Tuples und 15 Attributen  --> nicht verwendet</ul>
         <ul>routes_rated: CSV-File mit 55'858 Tuples und 9 Attributen</ul>
@@ -145,11 +145,11 @@
     </p>
     <br/>
         <h5 class="w4-center">Datenbereinigung</h5>
-        <p>Der Kaggle-Datensatz im Bereich Routen ist mit über 55'000 Tuples ziemlich groß. Um unsere Visualisierungen in D3.js effizient 
+        <p>Der Kaggle-Datensatz im Bereich Routen ist mit über 55'000 Tuples ziemlich gross. Um unsere Visualisierungen in D3.js effizient 
             darstellen zu können, bereiteten wir die Daten entsprechend auf. Damit unsere Bearbeitungen auch im Nachgang nachvollziehbar sind, 
             haben wir die Schritte in einem Jupyter Notebook mit Python vorgenommen und dieses Notebook ist ebenfalls
             im <a href="https://github.com/DAVIHS23/g03" target="_blank" title="GitHub für Modul DAVI">GitHub</a> zugänglich.<br/>
-            Zur einfachen Nachvollziehbarkeit dieser Seite erläutern wir nachfolgend die weichtigsten Mutationen:<br/>
+            Zur einfachen Nachvollziehbarkeit dieser Seite erläutern wir nachfolgend die wichtigsten Mutationen:<br/>
             <ul>
                 <li>Dataset ISO-Country reduziert auf die benötigten 4 Informationen (Name, ISO-Code mit 3 Buchstaben, Kontinent, Unterregion)</li>
                 <li>Schwierigkeitsgrade der Routen in Französischer Skala angeben</li>
@@ -166,7 +166,8 @@
         <h3 class="w3-center">Visualisierung</h3>
         <h5 class="w4-center">Dashboard der Climbing-Daten (optimiert auf Full-Screen Windows)</h5>
         <p>Hoverover mit der Maus über ein Land, um den Namen des Landes und die genaue Anzahl vorhandener Kletterrouten zu erfahren.
-            Durch Zooming können auch kleinere Länder ausgewählt werden (Nutze den Reset-Button unter der Weltkarte, um wieder die ganze Weltkarte zu sehen).
+            Nutze das Maus-Rad um zu zoomen und bewege die Weltkarte durch Klicken und Bewegen. Dadurch können auch kleinere Länder ausgewählt werden 
+            (Nutze den Reset-Button unter der Weltkarte, um wieder die ganze Weltkarte zu sehen).
             <br/>
             <!--Visualisierung der Weltkarte mittels weltkarte.js-->
             <svg class="worldmap" id="my_worldmap" width="800" height="500"></svg>
@@ -198,7 +199,7 @@
         <h5 class="w4-center">Visuelle Design-Entscheidungen</h5>
         <h6>Grundlagen Visual Design</h6>
         <p>Der Schwerpunkt der Visualisierung liegt auf der Weltkarte. Ziel ist es, dem Nutzer/der Nutzerin ein intuitives Dashboard bereitzustellen,
-            auf dem alle relevanten Informationen schnell gefunden werden können. Die Nutzenden, in diesem Fall Kletterbegeisterte, möchten herausfinden, wo 
+            auf dem alle relevanten Informationen schnell gefunden werden können. Die Nutzenden, in diesem Fall Kletter-Begeisterte, möchten herausfinden, wo 
             sie ihre Ferien verbringen möchten.<br/>
             Um die Frage "WO" zu beantworten, haben wir uns für eine Weltkarte entschieden, da diese für diesen Use Case besonders geeignet ist. Mithilfe 
             der Visualisierung können die Nutzenden schnell erkennen, welche Länder in Frage kommen. Die Frage "WAS" wurde durch die Implementierung der Treemap und
@@ -208,7 +209,7 @@
         <p>Eine Weltkarte bietet eine übersichtliche Möglichkeit, die geografische Verteilung der Kletterrouten zu zeigen. 
             Durch die farbliche Darstellung der Weltkarte können wir auf einen Blick erkennen, in welchen Ländern Kletterrouten im Dataset verfügbar sind.
             Zusätzlich kann die Person auch mit der Maus über das Land in der Weltkarte fahren und sieht dann gleichzeitig den Namen des Landes und die Anzahl vorhandener Routen.
-            Dies erleichtert die Auswahl eines Kontinets bzw. eines Landes für Kletterferien.<br/>
+            Dies erleichtert die Auswahl eines Kontinents bzw. eines Landes für Kletterferien.<br/>
         </p>
         <h6 class="w4-center">Treemap</h6>
         <p>Die Verwendung einer Treemap ermöglicht es uns, die Dichte der Kletterrouten auf Stufe Ländern visuell anzuzeigen. 
@@ -253,7 +254,7 @@
             Data-Ink-Ratio zu maximieren. Ein höherer Anteil an Tinte, der direkt die Daten repräsentiert, führt zu klareren und effizienteren Grafiken. 
             Dieser Ansatz trägt dazu bei, dass visuelle Darstellungen genauer und informativer werden.<br/>
             Um dieses "Data-Ink-Ratio" so hoch wie möglich zu halten, wurde im Rahmen des Projektes folgendes beachtet:<br/>
-            <ul><li>Weltkarte: eine Farbskale von 5 Stufen ; orange-Farbe in Anlehnung an die Farbe des Bodens ; Blau für das Wasser (damit die Grenzen der Karte ersichtlich ist; vor allem wenn gezoomt wurde)</li>
+            <ul><li>Weltkarte: eine Farbskala von 5 Stufen ; orange-Farbe in Anlehnung an die Farbe des Bodens ; Blau für das Wasser (damit die Grenzen der Karte ersichtlich ist; vor allem wenn gezoomt wurde)</li>
             <li>Treemap: pro Kontinent eine Farbe</li>
             <li>Balkendiagramm: wenig Hilfszeilen</li></ul>
 
@@ -270,7 +271,7 @@
             <li>Manipulation von Ansichten (auswählen, navigieren, koordinieren, organisieren) - Wenn Sie auf das gewünschte Land zeigen, erscheint
             eine entsprechende Legende, die sich mit dem Mauszeiger bewegt. Durch das Zoomen in der Weltkarte können auch kleinere Länder angezeigt werden. 
             Ausserdem werden mit der Treemap und dem Balkendiagramm mehrere Diagramme angezeigt, um einen möglichst klaren Überblick zu erhalten.</li><br/>
-            <li>Prozess und Herkunft (aufzeichnen, kommentieren, weierleiten, anleiten) - Die visuelle interpretation beschränkt sich nicht auf die
+            <li>Prozess und Herkunft (aufzeichnen, kommentieren, weiterleiten, anleiten) - Die visuelle interpretation beschränkt sich nicht auf die
             Erstellung und Bearbeitung von Visualisierungen, sondern umfasst eine Reihe von iterativen Datenexplorationen und Interpretationen.</li><br/>
             </ul> 
             Das bedeutet, dass für unser Projekt zunächst die Daten analysiert und ausgewählt wurden, um die relevanten Informationen
@@ -299,18 +300,18 @@
     <p>Basierend auf den Visualisierungen haben wir folgende Informationen gewonnen:<br/>
     <ul>
         <li> Es ist ersichtlich, dass in Asien sowie in Afrika keine oder nur sehr wenige Kletterrouten veröffentlicht sind.</li>
-        <li> Alleine in Spanien sind mehr Kletterrouten veröffentlicht, wie in allen anderen Kontinenten zusammen (das Treemap-Feld ist grösse als die anderen Felder zusammen)</li>
+        <li> Alleine in Spanien sind mehr Kletterrouten veröffentlicht, wie in allen anderen Kontinenten zusammen (das Treemap-Feld ist grösser als die anderen Felder zusammen)</li>
     </ul>
     Während der Erstellung der Webpage begegneten wir folgenden Herausforderungen:
     <ul>
-        <li> Da die Graphen-Codes aus C3-Gallery und weiterne Plattformen auf unterschiedlichen D3-Versionen basierten, wurde es 
+        <li> Da die Graphen-Codes aus C3-Gallery und weitere Plattformen auf unterschiedlichen D3-Versionen basierten, wurde es 
             sehr zeitintensiv, die erstellten Visualisierungen an eine einheitliche Version anzupassen. Teilweise wurden Funktionen
             in Versionen nicht mehr unterstützt, da sie anders in der Library umgesetzt wurden.</li> 
         <li>Die Umsetzung in D3 ist massiv aufwändiger als die Datenvisualisierung im Power-BI von Microsoft. Dadurch ist aber auch sichtbar geworden,
-        wie viel Programmieraufwand hiner Power-BI steckt.</li>
+        wie viel Programmieraufwand hinter Power-BI steckt.</li>
         <li>Das Verlinken von zwei Visualisierungen war ebenfalls herausfordernd. Auch da es im html bzw. javascript nicht einfach zum Debuggen ist.</li>
     </ul>
-    Die Gruppenarbeit hat uns (kurz vor Abschluss des Major) noch einmal in Bezug auf Daten-Bewirtschaftung, Programmierung und Webpaging und natürlich die 
+    Die Gruppenarbeit hat uns (kurz vor Abschluss des Major) noch einmal in Bezug auf Daten-Bewirtschaftung, Programmierung und Webpages erstellen und natürlich die 
     effiziente Visualisierung gefordert und hat diese Disziplinen sehr gut zusammengefasst.
 </p>
 </div>
