@@ -49,6 +49,7 @@ d3.csv(file2).then(function (data) {
     // prepare a color scale
     const color = d3.scaleOrdinal(d3.schemeTableau10)
 
+
     // add the color of the rectangles:
     let selectedCountry = undefined;
     let selectedContinent = undefined;
@@ -102,4 +103,46 @@ d3.csv(file2).then(function (data) {
         .attr("fill", "white");
 
     d3.selectAll("rect")
+
+    //Initialize legend
+    const treemapLegendItemSize = 12;
+    const treemapLegendSpacing = 4;
+    const xOffset = 5;
+    const yOffset = 5;
+    const continents = ["Europe","Americas", "Asia", "Oceania", "Africa"];
+    const treemap_legend = d3
+        .select('#treemap_legend')
+        .append('svg')
+        .selectAll('.legendItem')
+        .data(continents)
+        .enter()
+        .append('g')
+        .attr('class', 'legendItem')
+        .attr('transform', function(d, i) {
+            const height = treemapLegendItemSize + treemapLegendSpacing;
+            const offset = height * continents.length / 2;
+            const horz = xOffset;
+            const vert = i * height + offset + yOffset;
+            return 'translate(' + horz + ',' + vert + ')';
+        });
+
+    // Append colored rectangles to the legend
+    treemap_legend
+        .append('rect')
+        .attr('width', treemapLegendItemSize)
+        .attr('height', treemapLegendItemSize)
+        .style('fill', color);
+
+    //Append legend text
+    treemap_legend
+        //.enter()
+        .append('text')
+        .attr('x', xOffset + treemapLegendItemSize + 5)
+        .attr('y', (d, i) => yOffset + 7)
+        .text(function(d){ return d});		
+
+        console.log("Treemap: root for Text = ");
+        console.log(continents);
+
 });
+
