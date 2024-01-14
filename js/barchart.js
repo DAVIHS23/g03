@@ -1,22 +1,35 @@
 // set the dimensions and margins of the graph
-const marginBar = {top: 30, right: 30, bottom: 30, left: 60},
+const marginBar = {top: 30, right: 30, bottom: 45, left: 60},
     widthBar = 600 - marginBar.left - marginBar.right,
     heightBar = 600 - marginBar.top - marginBar.bottom;
 
 // append the svg object to the body of the page
-const svgBar = d3.select("#my_barchart")
-.append("svg")
+const svg = d3.select("#my_barchart")
+    .append("svg")
     .attr("width", widthBar + marginBar.left + marginBar.right)
-    .attr("height", heightBar + marginBar.top + marginBar.bottom)
-.append("g")
+    .attr("height", heightBar + marginBar.top + marginBar.bottom);
+svgBar = svg.append("g")
     .attr("transform", `translate(${marginBar.left},${marginBar.top})`);
-svgBar.append("text")
+// chart title
+svg.append("text")
     .attr("id", "barTitle")
     .attr("x", widthBar - 200)
-    .attr("y", 10)
-    //.attr("text-anchor", "middle")
+    .attr("y", 15)
     .style("font-size", "16px")
-    .style("font-weight", "bold")
+    .style("font-weight", "bold");
+// x-axis label
+svg.append("text")
+    .attr("text-anchor", "end")
+    .attr("x", widthBar)
+    .attr("y", heightBar + marginBar.top + 40)
+    .text("Schwierigkeitsgrad");
+// y-axis label
+svg.append("text")
+    .attr("text-anchor", "end")
+    .attr("transform", "rotate(-90)")
+    .attr("y", 15)
+    .attr("x", -(marginBar.top + 40))
+    .text("Anzahl Routen");
 
 // A function that create / update the plot for a given variable:
 function updateBarchart(selCountry, selContinent, selCountryName) {
@@ -74,7 +87,7 @@ function updateBarchart(selCountry, selContinent, selCountryName) {
     if (selCountry) {
         title = selCountryName;
     }
-    svgBar.select("#barTitle")
+    svg.select("#barTitle")
         .text(title);
 };
 
